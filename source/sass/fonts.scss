@@ -1,39 +1,50 @@
 @font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src:
-    url("../fonts/opensans-light.woff2") format("woff2"),
-    url("../fonts/opensans-light.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Open Sans";
+  font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src:
-    url("../fonts/opensans-regular.woff2") format("woff2"),
-    url("../fonts/opensans-reguler.woff") format("woff");
+    url("../fonts/robotocondensed-regular.woff2") format("woff2"),
+    url("../fonts/robotocondensed-regular.woff") format("woff");
 }
 
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src:
-    url("../fonts/opensans-semibold.woff2") format("woff2"),
-    url("../fonts/opensans-semibold.woff") format("woff");
-}
+// @font-face {
+//   font-family: "Roboto Condensed";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-display: swap;
+//   src:
+//     url("../fonts/robotocondensed-regular.woff2") format("woff2"),
+//     url("../fonts/robotocondensed-regular.woff") format("woff");
+// }
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src:
-    url("../fonts/opensans-bold.woff2") format("woff2"),
-    url("../fonts/opensans-bold.woff") format("woff");
+    url("../fonts/robotocondensed-bold.woff2") format("woff2"),
+    url("../fonts/robotocondensed-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url("../fonts/roboto-medium.woff2") format("woff2"),
+    url("../fonts/roboto-medium.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "PT Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("../fonts/ptmono-regular.woff2") format("woff2"),
+    url("../fonts/ptmono-regular.woff") format("woff");
 }
