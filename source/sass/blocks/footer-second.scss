@@ -1,0 +1,19 @@
+.footer-second {
+  border-top: 1px solid $grey-board;
+  background-color: $grey1;
+}
+
+.footer-second__wrap {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-family: "PT Mono", "Arial", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: $grey-letter;
+    text-transform: uppercase;
+  }
+}

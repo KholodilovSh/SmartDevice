@@ -42,13 +42,29 @@
   </header>
 
   <main>
-    <section class="promo">
-      <h2>Печатные платы</h2>
-      <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <button class="promo__button" type="button">
-        Получить бесплатную консультацию
-      </button>
-      <p>Скролл вниз</p>
+    <section class="promo container container--promo">
+      <div class="promo__wrap">
+        <h2>Печатные платы</h2>
+        <h3>производство и монтаж, поставка комплектующих, блоков и модулей</h3>
+        <button class="promo__button" type="button">
+          <span class="promo__button-text">
+            Получить бесплатную консультацию
+          </span>
+          <span class="promo__button-mobile-text">
+            Бесплатная консультация
+          </span>
+        </button>
+      </div>
+      <picture>
+        <!-- 1х: 705px; 2x: 1410px -->
+        <source type="image/webp" media="(min-width: 1024px)" srcset="img/plates_desktop@1x.webp 1x, img/plates_desktop@2x.webp 2x">
+        <!-- 1х: 465px; 2x: 930px -->
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/plates_tablet@1x.webp 1x, img/plates_tablet@2x.webp 2x">
+        <!-- 1х: 301px; 2x: 602px -->
+        <source type="image/webp" srcset="img/plates_mobile@1x.webp 1x, img/plates_mobile@2x.webp 2x">
+        <!-- 1х: 301px; 2x: 602px -->
+        <img src="img/plates_mobile@1x.png" srcset="img/plates_mobile@2x.png 2x" width="705" height="515" alt="Платы, разложенные веером">
+      </picture>
     </section>
     <section class="achievments">
       <ul class="achievments__list">
@@ -121,45 +137,53 @@
   </main>
   <footer>
     <section class="footer-first">
-      <div class="container container--tablet-mobile">
-        <a class="footer-first__link">
-          <svg width="52" height="52" viewBox="0 0 52 52">
-            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-          </svg>
-          <h1>Smart Device</h1>
-          <p>умные технологии</p>
-        </a>
-        <ul class="footer-first__social">
-          <li><a href="https://www.facebook.com/htmlacademy" class="contacts__link contacts__link--facebook">Facebook</a></li>
-          <li><a href="https://vk.com/htmlacademy" class="contacts__link contacts__link--vk">OK</a></li>
-          <li><a href="https://vk.com/htmlacademy" class="contacts__link contacts__link--vk">VK</a></li>
-        </ul>
-      </div>
-      <div class="footer-first__parts">
-        <h2>Разделы сайта</h2>
-        <ul>
-          <li>О компании</li>
-          <li>Продукты</li>
-          <li>Производство печатных плат</li>
-          <li>Монтаж печатных плат</li>
-          <li>Комплектующие</li>
-          <li>Доставка</li>
-          <li>Контакты</li>
-        </ul>
-      </div>
-      <div class="footer-first__contacts">
-        <h2>Наш офис</h2>
-        <p>г. Мытищи, Олимпийский проспект, д.10</p>
-        <p>+7 (495) 589-40-50</p>
-        <p>+7 (925) 003-87-67</p>
-        <p>+7 (926) 926-080-79</p>
+      <div class="footer-first__wrap container container--tablet-mobile">
+        <div>
+          <a class="footer-first__link">
+            <svg width="52" height="52" viewBox="0 0 52 52">
+              <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+            </svg>
+            <div>
+              <h1>Smart Device</h1>
+              <p>умные технологии</p>
+            </div>
+          </a>
+          <ul class="footer-first__socials">
+            <li><a href="https://www.facebook.com/htmlacademy" class="footer-first__social footer-first__social--facebook"></a></li>
+            <li><a href="https://vk.com/htmlacademy" class="footer-first__social footer-first__social--ok"></a></li>
+            <li><a href="https://vk.com/htmlacademy" class="footer-first__social footer-first__social--vk"></a></li>
+          </ul>
+        </div>
+        <div class="footer-first__parts">
+          <h2>Разделы сайта</h2>
+          <ul>
+            <li>О компании</li>
+            <li>Комплектующие</li>
+            <li>Продукты</li>
+            <li>Доставка</li>
+            <li>Производство печатных плат</li>
+            <li>Контакты</li>
+            <li>Монтаж печатных плат</li>
+          </ul>
+        </div>
+        <div class="footer-first__contacts">
+          <h2>Наш офис</h2>
+          <ul>
+            <li>г. Мытищи, Олимпийский проспект, д.10</li>
+            <li>+7 (495) 589-40-50</li>
+            <li>+7 (925) 003-87-67</li>
+            <li>+7 (926) 926-080-79</li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="footer-second">
-      <p>Все права защищены</p>
-      <p>1999-2018 SD Service Devices</p>
-      <p>Условия конфиденциальности</p>
-      <p>Developed by wow studio</p>
+      <div class="footer-second__wrap container">
+        <p>Все права защищены</p>
+        <p>1999-2018 SD Service Devices</p>
+        <p>Условия конфиденциальности</p>
+        <p>Developed by wow studio</p>
+      </div>
     </section>
   </footer>
   <section class="modal visually-hidden">
