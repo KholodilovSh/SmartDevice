@@ -17,10 +17,15 @@
     }
   }
 
-  //   @media (max-width: $mobile-width-only) {
-  //     width: 288px;
-  //     // max-width: none;
-  //     min-width: 288px;
-  //   }
-  // }
+  &--footer-first__wrap {
+    @media (max-width: $tablet-width-only) {
+      max-width: none;
+    }
+  }
+
+  &--footer-first__wrap2 {
+    @media (max-width: $mobile-width-only) {
+      max-width: none;
+    }
+  }
 }
