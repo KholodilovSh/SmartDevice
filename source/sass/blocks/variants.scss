@@ -1,0 +1,189 @@
+$shift-psevdo: 43px;
+$shift-psevdo-mobile: 23px;
+
+.variants {
+  padding-top: 93px;
+  padding-bottom: 127px;
+  background-color: $black2;
+  color: $white;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 53px;
+    padding-bottom: 78px - $shift-psevdo;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 64px - $shift-psevdo-mobile;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 47px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+
+    @media (max-width: $tablet-width-only) {
+      margin-bottom: 89px;
+      max-width: 613px;
+      font-size: 32px;
+      line-height: 45px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 60px;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    max-width: 1170px;
+    list-style: none;
+
+    @media (max-width: $tablet-width-only) {
+      display: block;
+    }
+  }
+}
+
+.variants__item {
+  position: relative;
+  width: 31.6%; //370px;
+  height: 620px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 100%;
+    height: 256px;
+  }
+
+  h3 {
+    margin-top: 53px;
+    margin-left: 44px;
+    width: 156px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 65px;
+    height: 65px;
+    z-index: 1;
+    background-image: url("../img/blue-arrow.svg");
+
+    @media (max-width: $tablet-width-only) {
+      bottom: $shift-psevdo;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      bottom: $shift-psevdo-mobile;
+    }
+  }
+
+  &--fabrication,
+  &--montage,
+  &--light {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 620px;
+      opacity: 0.2;
+
+      @media (max-width: $tablet-width-only) {
+        top: -$shift-psevdo;
+        width: 720px;
+        height: 256px;
+      }
+
+      @media (max-width: $mobile-width-only) {
+        top: -$shift-psevdo-mobile;
+        width: 290px;
+      }
+    }
+  }
+
+  &--fabrication::after {
+    background-image: url("../img/1_desktop@1x.png");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/1_desktop@2x.png");
+    }
+
+    @media (max-width: $tablet-width-only) {
+      background-image: url("../img/1_tablet@1x.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/1_tablet@2x.png");
+      }
+    }
+
+    @media (max-width: $mobile-width-only) {
+      background-image: url("../img/1_mobile@1x.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/1_mobile@2x.png");
+      }
+    }
+  }
+
+  &--montage::after {
+    background-image: url("../img/2_desktop@1x.png");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/2_desktop@2x.png");
+    }
+
+    @media (max-width: $tablet-width-only) {
+      background-image: url("../img/2_tablet@1x.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/2_tablet@2x.png");
+      }
+    }
+
+    @media (max-width: $mobile-width-only) {
+      background-image: url("../img/2_mobile@1x.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/2_mobile@2x.png");
+      }
+    }
+  }
+
+  &--light::after {
+    background-image: url("../img/3_desktop@1x.png");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/3_desktop@2x.png");
+    }
+
+    @media (max-width: $tablet-width-only) {
+      background-image: url("../img/3_tablet@1x.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/3_tablet@2x.png");
+      }
+    }
+
+    @media (max-width: $mobile-width-only) {
+      background-image: url("../img/3_mobile@1x.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/3_mobile@2x.png");
+      }
+    }
+  }
+}
