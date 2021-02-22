@@ -1,0 +1,107 @@
+.about-us {
+  position: relative;
+  margin-bottom: 110px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 83px;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 65px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 220px;
+    height: 317px;
+    background-image: url("../img/2005_desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/2005_desktop@2x.png");
+    }
+
+    @media (max-width: $tablet-width-only) {
+      width: 251px;
+      height: 362px;
+      background-image: url("../img/2005_tablet@1x.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/2005_tablet@2x.png");
+      }
+    }
+
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+
+  h2 {
+    margin-left: 126px;
+    margin-bottom: 18px;
+    font-size: 36px;
+    line-height: 51px;
+    font-weight: 400;
+    color: $grey;
+
+    @media (max-width: $tablet-width-only) {
+      margin-left: 210px;
+      margin-bottom: 24px;
+      font-size: 32px;
+      line-height: 45px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin-left: 0;
+    }
+  }
+
+  p {
+    max-width: 984px;
+    margin-left: 126px;
+    margin-bottom: 22px;
+    font-family: "PT Mono", "Arial", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $grey;
+
+    @media (max-width: $tablet-width-only) {
+      margin-left: 210px;
+      margin-bottom: 34px;
+      max-width: 532px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin-left: 0;
+    }
+  }
+}
+
+.about-us__button {
+  margin-left: 126px;
+  width: 180px;
+  height: 45px;
+  border: 1px solid $light-blue;
+  border-radius: 5px;
+  color: $light-blue;
+  background-color: $white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @media (max-width: $tablet-width-only) {
+    margin-left: 210px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 0;
+  }
+}
