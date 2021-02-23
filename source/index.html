@@ -120,30 +120,34 @@
         </ul>
       </div>
     </section>
-    <section class="questions">
-      <form class="questions__form" action="https://echo.htmlacademy.ru/courses" method="post">
-        <h2>Остались вопросы? Задайте их нам!</h2>
-        <p>Мы проконсультируем Вас бесплатно</p>
-        <div class="questions__wrap">
-          <div class="questions__name">
-            <label for="name" class="visually-hidden">Имя</label>
-            <input type="text" name="name" id="name" placeholder="Имя" required>
+    <section class="feedback">
+      <div class="container">
+        <form class="feedback__form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <h2>Остались вопросы? Задайте их нам!</h2>
+          <p>Мы проконсультируем Вас бесплатно</p>
+          <div class="feedback__wrap">
+            <div class="feedback__name">
+              <label for="name" class="visually-hidden">Имя</label>
+              <input type="text" name="name" id="name" placeholder="Имя" required>
+            </div>
+            <div class="feedback__telephone">
+              <label for="phone" class="visually-hidden">Телефон</label>
+              <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="[0-9]{5,10}" required>
+            </div>
           </div>
-          <div class="questions__telephone">
-            <label for="phone" class="visually-hidden">Телефон</label>
-            <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="[0-9]{5,10}" required>
-          </div>
-          <div class="questions__text">
+          <div class="feedback__text">
             <label for="text" class="visually-hidden">Ваш вопрос</label>
             <textarea name="text" id="text" placeholder="Ваш вопрос" required></textarea>
           </div>
-          <div class="container container--submit">
-            <button class="questions__submit" type="submit">Задать вопрос</button>
-          </div>
-          <label for="agreement">Я согласен на обработку персональных данных</label>
-          <input class="questions__check visually-hidden" id="agreement" type="checkbox" name="agreement" checked>
-        </div>
-      </form>
+          <div class="feedback__wrap">
+            <!-- <div class="container container--submit"> -->
+            <button class="feedback__submit" type="submit">Задать вопрос</button>
+            <!-- </div> -->
+              <input class="feedback__check visually-hidden" id="agreement" type="checkbox" name="agreement" checked>
+              <label class="feedback__label" for="agreement">Я согласен на обработку персональных данных</label>
+            </div>
+        </form>
+      </div>
     </section>
   </main>
   <footer>
