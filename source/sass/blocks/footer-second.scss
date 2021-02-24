@@ -6,6 +6,7 @@
 .footer-second__wrap {
   display: flex;
   justify-content: space-between;
+  padding-right: 5px;
 
   @media (max-width: $mobile-width-only) {
     margin-top: 28px;
@@ -20,6 +21,7 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
+    letter-spacing: 0.04em;
     color: $grey-letter;
     text-transform: uppercase;
 

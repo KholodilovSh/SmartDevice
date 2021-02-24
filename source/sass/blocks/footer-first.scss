@@ -18,7 +18,7 @@ $shift: 54px;
 
   h3 {
     margin-top: 0;
-    margin-bottom: 29px;
+    margin-bottom: 24px;
     font-size: 15px;
     font-weight: 400;
     line-height: 16px;
@@ -117,7 +117,7 @@ $shift: 54px;
   }
 
   h2 {
-    margin-top: 6px;
+    margin-top: 5px;
     margin-bottom: 0;
     font-size: 25px;
     font-weight: 700;
@@ -141,7 +141,7 @@ $shift: 54px;
   justify-content: space-between;
   padding: 0;
   list-style: none;
-  width: 112px;
+  width: 85px;
 
   @media (max-width: $mobile-width-only) {
     margin-left: auto;
@@ -209,6 +209,9 @@ $shift: 54px;
   }
 }
 
+.footer-first__contacts {
+  margin-right: 3px;
+}
 
 .footer-first__parts-border {
   @media (max-width: $mobile-width-only) {
@@ -234,7 +237,8 @@ $shift: 54px;
   }
 
   li {
-    margin-right: 40px;
+    margin-left: -3px;
+    margin-right: 78px;
   }
 }
 

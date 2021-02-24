@@ -1,6 +1,6 @@
 .main-header {
   position: absolute;
-  top: 0;
+  top: 0; // 42px;
   left: 0;
   right: 0;
   height: 881px;
@@ -88,7 +88,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 654px;
+  width: 625px;
 
   @media (max-width: $tablet-width-only) {
     width: 88px;
@@ -113,7 +113,7 @@
 
 .main-header__post {
   position: relative;
-  margin-right: 122px;
+  margin-right: 120px;
 
   @media (max-width: $tablet-width-only) {
     margin-right: 33px;
@@ -123,10 +123,18 @@
     content: "";
     position: absolute;
     left: -40px;
-    top: 0;
+    top: 2px;
     width: 19px;
     height: 14px;
     background-image: url("../img/envelope.svg");
+    background-size: cover;
+
+    @media (max-width: $tablet-width-only) {
+      left: 6px;
+      top: -12px;
+      width: 26px;
+      height: 19px;
+    }
   }
 }
 
@@ -141,15 +149,24 @@
   &::after {
     content: "";
     position: absolute;
-    left: -40px;
+    left: -36px;
     top: 0;
     width: 18px;
     height: 18px;
     background-image: url("../img/phone-call.svg");
+    background-size: cover;
+
+    @media (max-width: $tablet-width-only) {
+      left: 15px;
+      top: -14px;
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
 .main-header__button {
+  margin-right: 5px;
   height: 45px;
   width: 180px;
   border: 1px solid $white;
@@ -159,6 +176,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 
   @media (max-width: $tablet-width-only) {
