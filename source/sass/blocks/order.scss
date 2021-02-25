@@ -1,9 +1,10 @@
-.modal {
+.order {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 2;
   margin: auto;
   display: none;
   background-color: $light-blue;
@@ -28,7 +29,15 @@
   }
 }
 
-.modal__form {
+.order--show {
+  display: block;
+  width: 778px;
+  height: 444px;
+  box-shadow: 0 4px 30px $grey;
+  animation: bounce 0.6s;
+}
+
+.order__form {
   margin-left: auto;
   margin-right: auto;
   max-width: 590px;
@@ -70,18 +79,18 @@
   }
 }
 
-.modal__wrap {
+.order__wrap {
   display: block;
   margin-left: 3px;
 }
 
-.modal__name,
-.modal__telephone,
-.modal__submit {
+.order__name,
+.order__telephone,
+.order__submit {
   width: 100%;
 }
 
-.modal__text {
+.order__text {
   textarea {
     padding-top: 13px;
     padding-left: 17px;
@@ -89,7 +98,7 @@
   }
 }
 
-.modal__telephone {
+.order__telephone {
   padding-left: 4px;
 
   input {
@@ -97,7 +106,7 @@
   }
 }
 
-.modal__submit {
+.order__submit {
   margin-left: -3px;
   margin-bottom: 30px;
   height: 45px;
@@ -123,7 +132,7 @@
   }
 }
 
-.modal__label {
+.order__label {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -150,7 +159,7 @@
   }
 }
 
-.modal__check:checked + .modal__label::after {
+.order__check:checked + .order__label::after {
   position: absolute;
   content: "";
   top: 6px;
@@ -161,18 +170,18 @@
   background-repeat: no-repeat;
 }
 
-.modal__label:hover {
+.order__label:hover {
   &,
   &::before {
     opacity: 0.7;
   }
 }
 
-.modal__check:active,
-.modal__check:focus {
-  & + .modal__label,
-  & + .modal__label::after,
-  & + .modal__label::before {
+.order__check:active,
+.order__check:focus {
+  & + .order__label,
+  & + .order__label::after,
+  & + .order__label::before {
     opacity: 0.6;
     color: $grey;
   }

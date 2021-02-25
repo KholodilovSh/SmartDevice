@@ -33,9 +33,9 @@
         <a class="main-header__telephone" href="tel:+74950005252">
           <p>+7 (495) 000 52 52</p>
         </a>
-        <button class="main-header__button" type="button">
-          Заказать звонок
-        </button>
+        <a class="main-header__oorder" href="order-no-js.html">
+          <p>Заказать звонок</p>
+        </a>
       </div>
     </div>
   </header>
@@ -45,7 +45,8 @@
       <div class="promo__wrap">
         <h2>Печатные платы</h2>
         <h3>производство и монтаж, поставка комплектующих, блоков и модулей</h3>
-        <a class="promo__link" href="#form">
+        <!-- <a class="promo__link main-header__order" href="#form"> -->
+        <a class="promo__link main-header__order">
           <span class="promo__link-text">
             Получить бесплатную консультацию
           </span>
@@ -109,17 +110,17 @@
         <h2>Service Device предлагает следующие товары и услуги</h2>
         <ul class="variants__list">
           <li class="variants__item variants__item--fabrication">
-            <a href="modal-no-js.html">
+            <a href="order-no-js.html">
               <h3>Производство печатных плат</h3>
             </a>
           </li>
           <li class="variants__item variants__item--montage">
-            <a href="modal-no-js.html">
+            <a href="order-no-js.html">
               <h3>Монтаж печатных плат</h3>
             </a>
           </li>
           <li class="variants__item variants__item--light">
-            <a href="modal-no-js.html">
+            <a href="order-no-js.html">
               <h3>Комплектующие для светотехники</h3>
             </a>
           </li>
@@ -230,29 +231,29 @@
       </div>
     </section>
   </footer>
-  <section class="modal">
+  <section class="order">
     <h2>Закажите звонок</h2>
     <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-    <form class="modal__form" action="https://echo.htmlacademy.ru/courses" method="post">
-      <button class="modal__close" type="reset" aria-label="закрыть"></button>
-      <div class="modal__wrap">
-        <div class="modal__name">
+    <form class="order__form" action="https://echo.htmlacademy.ru/courses" method="post">
+      <button class="order__close" type="reset" aria-label="закрыть"></button>
+      <div class="order__wrap">
+        <div class="order__name">
           <label for="name" class="visually-hidden">Имя</label>
           <input type="text" name="name" id="name" placeholder="Имя" required="">
         </div>
-        <div class="modal__telephone">
+        <div class="order__telephone">
           <label for="phone" class="visually-hidden">Телефон</label>
           <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="[0-9]{5,10}" required="">
         </div>
-        <div class="modal__text">
+        <div class="order__text">
           <label for="text" class="visually-hidden">Ваш вопрос</label>
           <textarea name="text" id="text" placeholder="Ваш вопрос" required=""></textarea>
         </div>
         <div class="container container--submit">
-          <button class="modal__submit" type="submit">Задать вопрос</button>
+          <button class="order__submit" type="submit">Задать вопрос</button>
         </div>
         <label for="agreement">Я согласен на обработку персональных данных</label>
-        <input class="modal__check visually-hidden" id="agreement" type="checkbox" name="agreement" checked="">
+        <input class="order__check visually-hidden" id="agreement" type="checkbox" name="agreement" checked="">
       </div>
     </form>
   </section>
