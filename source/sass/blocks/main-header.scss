@@ -56,6 +56,12 @@
 
   svg {
     margin-right: 16px;
+
+    @media (max-width: $mobile-width-only) {
+      margin-left: 2px;
+      height: 38px;
+      width: 38px;
+    }
   }
 
   h1 {
@@ -88,7 +94,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 654px;
+  width: 625px;
 
   @media (max-width: $tablet-width-only) {
     width: 88px;
@@ -97,10 +103,21 @@
 
 .main-header__post,
 .main-header__telephone {
+  cursor: pointer;
   font-family: "PT Mono", "Arial", serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
+
+  &:hover,
+  &:focus {
+    color: $light-blue;
+  }
+
+  &:active {
+    color: $light-blue;
+    opacity: 0.5;
+  }
 
   p {
     margin: 0;
@@ -113,7 +130,7 @@
 
 .main-header__post {
   position: relative;
-  margin-right: 122px;
+  margin-right: 120px;
 
   @media (max-width: $tablet-width-only) {
     margin-right: 33px;
@@ -123,10 +140,22 @@
     content: "";
     position: absolute;
     left: -40px;
-    top: 0;
+    top: 2px;
     width: 19px;
     height: 14px;
     background-image: url("../img/envelope.svg");
+    background-size: cover;
+
+    @media (max-width: $tablet-width-only) {
+      left: 6px;
+      top: -12px;
+      width: 26px;
+      height: 19px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      left: 14px;
+    }
   }
 }
 
@@ -141,15 +170,25 @@
   &::after {
     content: "";
     position: absolute;
-    left: -40px;
+    left: -36px;
     top: 0;
     width: 18px;
     height: 18px;
     background-image: url("../img/phone-call.svg");
+    background-size: cover;
+
+    @media (max-width: $tablet-width-only) {
+      left: 15px;
+      top: -14px;
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
 .main-header__button {
+  margin-right: 5px;
+  cursor: pointer;
   height: 45px;
   width: 180px;
   border: 1px solid $white;
@@ -159,12 +198,24 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $light-blue;
+  }
+
+  &:active {
+    color: $light-blue;
+    opacity: 0.5;
+  }
 
   @media (max-width: $tablet-width-only) {
     display: none;
   }
 }
+
 // .main-header__nav {
 //   display: flex;
 //   flex-wrap: wrap;

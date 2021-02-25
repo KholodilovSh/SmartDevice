@@ -4,7 +4,7 @@
   max-width: $max-width;
 
   @media (max-width: $tablet-width-only) {
-    max-width: 715px;
+    max-width: 720px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -24,6 +24,12 @@
   }
 
   &--footer-first__wrap2 {
+    margin-right: 0;
+
+    @media (max-width: $tablet-width-only) {
+      margin-right: auto;
+    }
+
     @media (max-width: $mobile-width-only) {
       max-width: none;
     }
