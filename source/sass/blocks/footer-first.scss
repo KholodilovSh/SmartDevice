@@ -32,25 +32,25 @@ $shift: 54px;
       margin-bottom: 0;
       padding-bottom: 28px;
 
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        right: 8px;
-        width: 16px;
-        height: 1px;
-        border-radius: 2px;
-        background-color: $grey-cross;
-      }
+      // &::before,
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   right: 8px;
+      //   width: 16px;
+      //   height: 1px;
+      //   border-radius: 2px;
+      //   background-color: $grey-cross;
+      // }
 
-      &::after {
-        top: 8px;
-      }
+      // &::after {
+      //   top: 8px;
+      // }
 
-      &::before {
-        top: 8px;
-        transform: rotate(90deg);
-      }
+      // &::before {
+      //   top: 8px;
+      //   transform: rotate(90deg);
+      // }
     }
   }
 }
@@ -214,7 +214,7 @@ $shift: 54px;
     list-style: none;
 
     @media (max-width: $mobile-width-only) {
-      margin-top: 36px;
+      margin-top: 8px;
       padding-bottom: 26px;
     }
   }
@@ -231,15 +231,6 @@ $shift: 54px;
 
 .footer-first__contacts {
   margin-right: 3px;
-
-  a:hover,
-  a:focus {
-    opacity: 0.7;
-  }
-
-  a:active {
-    opacity: 0.5;
-  }
 
   @media (max-width: $tablet-width-only) {
     margin-right: 11px;
@@ -303,11 +294,42 @@ $shift: 54px;
   }
 }
 
-.footer-first__parts--closed,
-.footer-first__contacts--closed {
+.footer-first__parts,
+.footer-first__contacts {
   @media (max-width: $mobile-width-only) {
-    ul {
-      display: none;
+    position: relative;
+
+    & h3:hover {
+      cursor: pointer;
+      color: $light-blue;
+    }
+
+    &--closed {
+      ul {
+        display: none;
+      }
+
+      & h3::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 16px;
+        height: 16px;
+        background-image: url("../img/plus.svg");
+      }
+    }
+
+    &--open {
+      & h3::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 16px;
+        height: 1px;
+        background-image: url("../img/minus.svg");
+      }
     }
   }
 }
