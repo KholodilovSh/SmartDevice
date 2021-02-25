@@ -163,6 +163,15 @@ $shift: 54px;
 .footer-first__social {
   position: relative;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
   &--facebook,
   &--ok,
   &--vk {
@@ -222,6 +231,15 @@ $shift: 54px;
 
 .footer-first__contacts {
   margin-right: 3px;
+
+  a:hover,
+  a:focus {
+    opacity: 0.7;
+  }
+
+  a:active {
+    opacity: 0.5;
+  }
 
   @media (max-width: $tablet-width-only) {
     margin-right: 11px;

@@ -63,7 +63,7 @@ $field-width: 47.4%;
 }
 
 .feedback__form {
-  margin-left: 51%; ;
+  margin-left: 51%;
   max-width: 570px;
 
   @media (max-width: $tablet-width-only) {
@@ -84,6 +84,15 @@ $field-width: 47.4%;
 
     &::placeholder {
       color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 1px solid $grey;
+    }
+
+    &:active {
+      opacity: 0.5;
     }
   }
 
@@ -181,6 +190,17 @@ $field-width: 47.4%;
   @media (max-width: $mobile-width-only) {
     margin-bottom: 30px;
   }
+
+  &:hover,
+  &:focus {
+    color: $grey;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $grey;
+    opacity: 0.5;
+  }
 }
 
 .feedback__label {
@@ -233,7 +253,6 @@ $field-width: 47.4%;
   @media (max-width: $mobile-width-only) {
     top: 6px;
   }
-
 }
 
 .feedback__label:hover {
@@ -249,5 +268,6 @@ $field-width: 47.4%;
   & + .feedback__label::after,
   & + .feedback__label::before {
     opacity: 0.6;
+    color: $grey;
   }
 }

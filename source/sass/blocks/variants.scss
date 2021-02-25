@@ -83,6 +83,17 @@ $shift-psevdo-mobile: 23px;
     }
   }
 
+  &:hover,
+  &:focus {
+    color: $grey;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $grey;
+    opacity: 0.5;
+  }
+
   &::before {
     content: "";
     position: absolute;

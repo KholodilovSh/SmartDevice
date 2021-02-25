@@ -18,6 +18,7 @@ $padding-top: 316px;
   h2 {
     position: relative;
     margin: 0 0 26px -2px;
+    z-index: 1;
     font-weight: 700;
     font-size: 80px;
     line-height: 94px;
@@ -46,6 +47,7 @@ $padding-top: 316px;
   h3 {
     position: relative;
     margin: 0 0 43px 94px;
+    z-index: 1;
     width: 663px;
     color: $white;
     font-family: "PT Mono", "Arial", serif;
@@ -112,8 +114,10 @@ $padding-top: 316px;
 }
 
 .promo__button {
-  margin-left: 94px;
   position: relative;
+  margin-left: 94px;
+  z-index: 1;
+  cursor: pointer;
   width: 407px;
   height: 55px;
   text-transform: uppercase;
@@ -125,6 +129,16 @@ $padding-top: 316px;
   border-radius: 5px;
   color: $white;
   background-color: $light-blue;
+
+  &:hover,
+  &:focus {
+    color: $grey;
+  }
+
+  &:active {
+    color: $grey;
+    opacity: 0.5;
+  }
 
   @media (max-width: $tablet-width-only) {
     margin-left: 46px;

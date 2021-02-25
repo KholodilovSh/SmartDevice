@@ -103,10 +103,21 @@
 
 .main-header__post,
 .main-header__telephone {
+  cursor: pointer;
   font-family: "PT Mono", "Arial", serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
+
+  &:hover,
+  &:focus {
+    color: $light-blue;
+  }
+
+  &:active {
+    color: $light-blue;
+    opacity: 0.5;
+  }
 
   p {
     margin: 0;
@@ -177,6 +188,7 @@
 
 .main-header__button {
   margin-right: 5px;
+  cursor: pointer;
   height: 45px;
   width: 180px;
   border: 1px solid $white;
@@ -189,10 +201,21 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
+  &:hover,
+  &:focus {
+    color: $light-blue;
+  }
+
+  &:active {
+    color: $light-blue;
+    opacity: 0.5;
+  }
+
   @media (max-width: $tablet-width-only) {
     display: none;
   }
 }
+
 // .main-header__nav {
 //   display: flex;
 //   flex-wrap: wrap;

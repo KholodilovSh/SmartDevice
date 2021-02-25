@@ -100,6 +100,7 @@
 .about-us__button {
   margin-top: 16px;
   margin-left: 303px;
+  cursor: pointer;
   width: 180px;
   height: 45px;
   border: 1px solid $light-blue;
@@ -111,6 +112,16 @@
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $grey;
+  }
+
+  &:active {
+    color: $grey;
+    opacity: 0.5;
+  }
 
   @media (max-width: $tablet-width-only) {
     margin-top: 22px;
