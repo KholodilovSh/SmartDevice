@@ -61,6 +61,8 @@
 
     @media (max-width: $mobile-width-only) {
       margin-left: 0;
+      font-size: 28px;
+      line-height: 40px;
     }
   }
 
@@ -83,6 +85,8 @@
 
     @media (max-width: $mobile-width-only) {
       margin-left: 0;
+      margin-bottom: 45px;
+      line-height: 21px;
     }
   }
 }
@@ -114,6 +118,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
+    margin-top: -10px;
     margin-left: 0;
   }
 }

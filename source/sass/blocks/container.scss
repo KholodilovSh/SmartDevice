@@ -26,6 +26,10 @@
   &--footer-first__wrap2 {
     margin-right: 0;
 
+    @media (max-width: $tablet-width-only) {
+      margin-right: auto;
+    }
+
     @media (max-width: $mobile-width-only) {
       max-width: none;
     }

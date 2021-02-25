@@ -1,5 +1,5 @@
 $margin-botton-li: 31px;
-$margin-botton-li-mobile: 20px;
+$margin-botton-li-mobile: 29px;
 
 .achievments {
   margin-top: 429px;
@@ -15,6 +15,7 @@ $margin-botton-li-mobile: 20px;
   }
 
   @media (max-width: $mobile-width-only) {
+    margin-top: 47px;
     margin-bottom: 60px - $margin-botton-li-mobile;
   }
 
@@ -33,7 +34,7 @@ $margin-botton-li-mobile: 20px;
 
     @media (max-width: $mobile-width-only) {
       margin-top: 67px;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
       font-size: 20px;
       line-height: 28px;
     }
@@ -51,6 +52,10 @@ $margin-botton-li-mobile: 20px;
 
     @media (max-width: $tablet-width-only) {
       min-width: 297px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      min-width: 247px;
     }
   }
 }
@@ -97,6 +102,7 @@ $margin-botton-li-mobile: 20px;
 
   @media (max-width: $mobile-width-only) {
     max-width: 100%;
+    min-height: 232px;
     margin-bottom: $margin-botton-li-mobile;
   }
 
@@ -128,6 +134,10 @@ $margin-botton-li-mobile: 20px;
       height: 36px;
       top: 29px;
     }
+
+    @media (max-width: $mobile-width-only) {
+      top: 20px;
+    }
   }
 
   &--confidence {
@@ -139,10 +149,23 @@ $margin-botton-li-mobile: 20px;
   }
 
   &--personal-cost {
-    @media (max-width: $tablet-width-only) {
-      h2 {
+    h2 {
+      @media (max-width: $tablet-width-only) {
         margin-top: 70px;
         margin-bottom: 7px;
+      }
+
+      @media (max-width: $mobile-width-only) {
+        margin-top: 63px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &--good-suppliers {
+    @media (max-width: $mobile-width-only) {
+      p {
+        min-width: 250px;
       }
     }
   }

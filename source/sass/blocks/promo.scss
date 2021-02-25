@@ -34,6 +34,8 @@ $padding-top: 316px;
     }
 
     @media (max-width: $mobile-width-only) {
+      margin-left: 0;
+      margin-bottom: 29px;
       z-index: 1;
       width: 277px;
       font-size: 40px;
@@ -60,11 +62,11 @@ $padding-top: 316px;
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 42px;
+      margin-bottom: 40px;
       margin-left: 52px;
       width: 245px;
       font-size: 16px;
-      line-height: 23px;
+      line-height: 24px;
     }
 
     &::after {
@@ -99,8 +101,8 @@ $padding-top: 316px;
     @media (max-width: $mobile-width-only) {
       width: 301px;
       height: 220px;
-      left: 0;
-      top: 200px;
+      left: 12px;
+      top: 150px;
     }
   }
 }
@@ -130,7 +132,7 @@ $padding-top: 316px;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-left: 0;
+    margin-left: 2px;
     width: 287px;
   }
 
