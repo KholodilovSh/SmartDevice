@@ -35,7 +35,6 @@
   width: 490px;
   height: 605px;
   box-shadow: 0 4px 30px $grey;
-  animation: bounce 0.6s;
 }
 
 .order__form {
@@ -184,7 +183,6 @@
   & + .order__label,
   & + .order__label::after,
   & + .order__label::before {
-    opacity: 0.6;
     color: $grey;
   }
 }

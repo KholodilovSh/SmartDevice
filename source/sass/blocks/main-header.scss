@@ -112,6 +112,7 @@
   &:hover,
   &:focus {
     color: $light-blue;
+    transform: scale(1.2);
   }
 
   &:active {

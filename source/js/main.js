@@ -8,9 +8,25 @@
 
   if (order) {
 
-    const mainHeaderOrder = document.querySelector('.main-header__order');
+    const orderForm = order.querySelector(".order__form");
+    const orderName = order.querySelector(".order__name-js");
+    const orderPhone = order.querySelector(".order__phone-js");
+    const orderText = order.querySelector(".order__text-js");
+
+    var isStorageSupport = true;
+    var storageFIO = "";
+    var storagePhone = "";
+
+    try {
+      storageFIO = localStorage.getItem("FIO");
+      storagePhone = localStorage.getItem("phone");
+    } catch (err) {
+      isStorageSupport = false;
+    }
+
+    // const mainHeaderOrder = document.querySelector('.main-header__order');
+    const mainHeaderOrder = document.querySelector('.promo__link');
     const orderClose = order.querySelector('.order__close');
-    // const menuItems = order.querySelectorAll('.order__item');
 
     const onClickMainHeaderOrder = function (evtClick) {
 
@@ -24,17 +40,32 @@
         }
       };
 
+      const onClickOverlay = function () {
+        onMenuClose();
+      };
+
       const onClickMenuClose = function () {
         onMenuClose();
+      };
+
+      const onSubmit = function (evt) {
+
+        if (!orderName.value || !orderPhone.value || !orderText.value) {
+          evt.preventDefault();
+        } else {
+          if (isStorageSupport) {
+            localStorage.setItem("FIO", orderName.value);
+            localStorage.setItem("phone", orderPhone.value);
+          }
+        };
       };
 
       const onMenuClose = function () {
         order.classList.remove('order--show');
         document.body.classList.remove('body--overflow-hidden');
         orderClose.removeEventListener('click', onClickMenuClose);
-        // for (let i = 0; i < menuItems.length; i++) {
-        //   menuItems[i].removeEventListener('click', onMenuClose);
-        // }
+        document.body.removeEventListener('click',onClickOverlay);
+        orderForm.removeEventListener('submit', onSubmit);
 
         mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
       };
@@ -44,13 +75,19 @@
       order.classList.add('order--show');
       document.body.classList.add('body--overflow-hidden');
 
-
+      orderForm.addEventListener('submit', onSubmit);
       orderClose.addEventListener('click', onClickMenuClose);
       document.addEventListener('keydown', onEscapeModalMenu);
 
-      // for (let i = 0; i < menuItems.length; i++) {
-      //   menuItems[i].addEventListener('click', onMenuClose);
-      // }
+      if (storageFIO) {
+        orderName.value = storageFIO;
+      }
+
+      if (storagePhone) {
+        orderPhone.value = storagePhone;
+      }
+      orderName.focus();
+
     };
 
     const onClickMainFooterFirstParts = function () {

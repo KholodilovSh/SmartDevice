@@ -163,6 +163,8 @@ $field-width: 47.4%;
 }
 
 .feedback__telephone {
+  position: relative;
+
   @media (max-width: $tablet-width-only) {
     padding-left: 4px;
   }
@@ -172,6 +174,16 @@ $field-width: 47.4%;
       padding-left: 11px;
     }
   }
+
+  // &:focus {
+  //   color: black;
+  //   // position: absolute;
+  //   // contain: "+7(";
+  //   // top: 0;
+  //   // left: -33px;
+  //   // width: 16px;
+  //   // height: 16px;
+  // }
 }
 
 .feedback__submit {
@@ -267,7 +279,6 @@ $field-width: 47.4%;
   & + .feedback__label,
   & + .feedback__label::after,
   & + .feedback__label::before {
-    opacity: 0.6;
     color: $grey;
   }
 }

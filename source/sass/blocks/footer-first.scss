@@ -31,26 +31,6 @@ $shift: 54px;
       margin-top: 28px;
       margin-bottom: 0;
       padding-bottom: 28px;
-
-      // &::before,
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   right: 8px;
-      //   width: 16px;
-      //   height: 1px;
-      //   border-radius: 2px;
-      //   background-color: $grey-cross;
-      // }
-
-      // &::after {
-      //   top: 8px;
-      // }
-
-      // &::before {
-      //   top: 8px;
-      //   transform: rotate(90deg);
-      // }
     }
   }
 }
@@ -81,7 +61,7 @@ $shift: 54px;
   }
 }
 
-.footer-firsr__no-on-desktop {
+.footer-first__no-on-desktop {
   margin-top: 15px;
   margin-left: -5px;
   font-family: "PT Mono", "Arial", serif;

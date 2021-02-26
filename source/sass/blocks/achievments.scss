@@ -126,19 +126,19 @@ $margin-botton-li-mobile: 29px;
     }
   }
 
-  &--short-term::after {
-    width: 29px;
-    background-image: url("../img/stopwatch.svg");
+  // &--short-term::after {
+  //   width: 29px;
+  //   background-image: url("../img/stopwatch.svg");
 
-    @media (max-width: $tablet-width-only) {
-      height: 36px;
-      top: 29px;
-    }
+  //   @media (max-width: $tablet-width-only) {
+  //     height: 36px;
+  //     top: 29px;
+  //   }
 
-    @media (max-width: $mobile-width-only) {
-      top: 20px;
-    }
-  }
+  //   @media (max-width: $mobile-width-only) {
+  //     top: 20px;
+  //   }
+  // }
 
   &--confidence {
     @media (max-width: $tablet-width-only) {
@@ -170,30 +170,30 @@ $margin-botton-li-mobile: 29px;
     }
   }
 
-  &--good-suppliers::after {
-    background-image: url("../img/hired.svg");
+  // &--good-suppliers::after {
+  //   background-image: url("../img/hired.svg");
 
-    @media (max-width: $tablet-width-only) {
-      width: 32px;
-      height: 33px;
-    }
-  }
+  //   @media (max-width: $tablet-width-only) {
+  //     width: 32px;
+  //     height: 33px;
+  //   }
+  // }
 
-  &--confidence::after {
-    width: 36px;
-    height: 31px;
-    background-image: url("../img/detective.svg");
+  // &--confidence::after {
+  //   width: 36px;
+  //   height: 31px;
+  //   background-image: url("../img/detective.svg");
 
-    @media (max-width: $tablet-width-only) {
-      top: 29px;
-      width: 30px;
-      height: 26px;
-    }
-  }
+  //   @media (max-width: $tablet-width-only) {
+  //     top: 29px;
+  //     width: 30px;
+  //     height: 26px;
+  //   }
+  // }
 
-  &--personal-cost::after {
-    background-image: url("../img/tag.svg");
-  }
+  // &--personal-cost::after {
+  //   background-image: url("../img/tag.svg");
+  // }
 
   &:hover {
     background-color: $light-blue;
@@ -201,6 +201,10 @@ $margin-botton-li-mobile: 29px;
     h2,
     p {
       color: $white;
+    }
+
+    svg {
+      fill: $white;
     }
   }
 }
