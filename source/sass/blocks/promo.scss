@@ -113,8 +113,9 @@ $padding-top: 316px;
   margin-right: 20px;
 }
 
-.promo__button {
+.promo__link {
   position: relative;
+  display: block;
   margin-left: 94px;
   z-index: 1;
   cursor: pointer;
@@ -129,6 +130,13 @@ $padding-top: 316px;
   border-radius: 5px;
   color: $white;
   background-color: $light-blue;
+
+  span {
+    position: absolute;
+    width: 350px;
+    left: 45px;
+    top: 18px;
+  }
 
   &:hover,
   &:focus {
@@ -149,36 +157,46 @@ $padding-top: 316px;
     margin-left: 2px;
     width: 287px;
   }
-
-  &::before {
-    content: "Скролл вниз";
-    position: absolute;
-    left: -132px;
-    top: 188px;
-    font-family: "PT Mono", "Arial", serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: -0.02em;
-    text-transform: none;
-    opacity: 0.5;
-    transform: rotate(-90deg);
-
-    @media (max-width: $tablet-width-only) {
-      display: none;
-    }
-  }
 }
 
-.promo__button-text {
+.promo__link-text {
   @media (max-width: $mobile-width-only) {
     display: none;
   }
 }
 
-.promo__button-mobile-text {
+.promo__link-mobile-text {
   @media (min-width: $mobile-width-only) {
     display: none;
+  }
+}
+
+.promo__scroll {
+  position: absolute;
+  left: -38px;
+  bottom: -186px;
+  color: $white;
+  font-family: "PT Mono", "Arial", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    color: $grey;
+    opacity: 0.5;
   }
 }

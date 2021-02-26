@@ -186,7 +186,9 @@
   }
 }
 
-.main-header__button {
+.main-header__order {
+  position: relative;
+  display: block;
   margin-right: 5px;
   cursor: pointer;
   height: 45px;
@@ -200,6 +202,13 @@
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  p {
+    position: absolute;
+    width: 350px;
+    left: 25px;
+    top: 0;
+  }
 
   &:hover,
   &:focus {
@@ -215,99 +224,3 @@
     display: none;
   }
 }
-
-// .main-header__nav {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
-//   margin-top: -390px;
-//   margin-bottom: 9px;
-//   padding: 0 10px 10px 10px;
-//   width: 873px;
-//   border-bottom: 1px solid $white-02;
-//   list-style-type: none;
-
-//   @media (max-width: $tablet-width-only) {
-//     display: none;
-//   }
-// }
-
-// .main-header__part {
-//   font-size: 16px;
-//   font-weight: 300;
-//   line-height: 32px;
-//   border: none;
-
-//   img {
-//     border: none;
-//   }
-
-//   &:hover {
-//     cursor: pointer;
-//     color: $main-acsent;
-//   }
-
-//   a {
-//     padding: 10px;
-//   }
-
-//   a:focus {
-//     color: $main-acsent;
-//     outline-offset: 4px;
-//     outline: 2px solid $main-acsent;
-//   }
-
-//   a:active {
-//     color: $main-acsent;
-//     outline-offset: 6px;
-//     outline: 2px solid $main-acsent;
-//   }
-// }
-
-// .main-header__button {
-//   display: none;
-
-//   @media (max-width: $tablet-width-only) {
-//     display: block;
-//     position: absolute;
-//     width: 50px;
-//     height: 57px;
-//     top: 0;
-//     right: 0;
-//     cursor: pointer;
-//     border: none;
-//     background-color: $main-acsent;
-
-//     &:hover {
-//       opacity: 0.7;
-//     }
-
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       top: 25px;
-//       right: 14px;
-//       width: 23px;
-//       height: 1px;
-//       background-color: $black;
-//       cursor: pointer;
-//       box-shadow:
-//         0 6px 0 0 $black,
-//         0 12px 0 0 $black;
-
-//       @media (max-width: $mobile-width-only) {
-//         top: 25px;
-//       }
-//     }
-
-//     &--clicked {
-//       display: none;
-//     }
-//   }
-
-//   &--no-js {
-//     @media (max-width: $tablet-width-only) {
-//       display: none;
-//     }
-//   }
-// }
