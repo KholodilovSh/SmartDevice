@@ -5,17 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="HtmlAcademy, Accelerator, Site 'Smart Device'">
-  <title>Smart Device</title>
+  <title>Smart Device: заказ звонка</title>
   <link href="css/style.min.css" rel="stylesheet">
   <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/robotocondensed-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/roboto-medium.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/ptmono-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Empty Page</h1>
-
+  <section class="order order--show order--no-js">
+    <h1>Закажите звонок</h1>
+    <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+    <form class="order__form" action="https://echo.htmlacademy.ru/courses" method="post">
+      <div class="order__wrap">
+        <div class="order__name">
+          <label for="name" class="visually-hidden">Имя</label>
+          <input type="text" name="name" id="name" placeholder="Имя" required>
+        </div>
+        <div class="order__telephone">
+          <label for="phone" class="visually-hidden">Телефон</label>
+          <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="[0-9]{10}" required>
+        </div>
+        <div class="order__text">
+          <label for="text" class="visually-hidden">Ваш вопрос</label>
+          <textarea name="text" id="text" placeholder="Ваш вопрос" required></textarea>
+        </div>
+        <div class="container">
+          <button class="order__submit" type="submit">Отправить</button>
+        </div>
+        <input class="order__check visually-hidden" id="order-agreement" type="checkbox" name="agreement" checked>
+        <label class="order__label" for="order-agreement">Я согласен на обработку персональных данных</label>
+      </div>
+    </form>
+  </section>
 </body>
 
 </html>
