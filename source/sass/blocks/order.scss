@@ -23,7 +23,7 @@
   p {
     margin: 0 0 24px 40px;
     width: 381px;
-    font-family: "PT Mono", "Arial", serif;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -46,7 +46,7 @@
   textarea {
     padding-left: 15px;
     border: none;
-    font-family: "PT Mono", "Arial", serif;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -132,58 +132,60 @@
   }
 }
 
-.order__label {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-  width: 338px;
-  cursor: pointer;
-  margin-left: 31px;
-  margin-right: 6px;
-  font-family: "PT Mono", "Arial", serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  opacity: 0.8;
+.order__checkbox {
+  label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    width: 338px;
+    cursor: pointer;
+    margin-left: 31px;
+    margin-right: 6px;
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.8;
 
-  &::before {
-    content: "";
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -33px;
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid $white;
+    }
+  }
+
+  input:checked + label::after {
     position: absolute;
-    top: 0;
-    left: -33px;
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    border: 1px solid $white;
+    content: "";
+    top: 6px;
+    left: -30px;
+    width: 9px;
+    height: 6px;
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
   }
-}
 
-.order__check:checked + .order__label::after {
-  position: absolute;
-  content: "";
-  top: 6px;
-  left: -30px;
-  width: 9px;
-  height: 6px;
-  background-image: url("../img/check.svg");
-  background-repeat: no-repeat;
-}
-
-.order__label:hover {
-  &,
-  &::before {
-    opacity: 0.7;
+  label:hover {
+    &,
+    &::before {
+      opacity: 0.7;
+    }
   }
-}
 
-.order__check:active,
-.order__check:focus {
-  & + .order__label,
-  & + .order__label::after,
-  & + .order__label::before {
-    color: $grey;
+  input:active,
+  input:focus {
+    & + label,
+    & + label::after,
+    & + label::before {
+      color: $grey;
+    }
   }
 }
 

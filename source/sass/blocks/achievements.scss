@@ -1,26 +1,26 @@
-$margin-botton-li: 31px;
-$margin-botton-li-mobile: 29px;
+$margin-botton-li: 34px;
+$margin-botton-li-mobile: 15px;
 
-.achievments {
-  margin-top: 429px;
-  margin-bottom: 104px - $margin-botton-li;
+.achievements {
+  margin-top: 116px;
+  margin-bottom: 100px - $margin-botton-li;
   background-image: url("../img/bcg_white_desktop.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 
   @media (max-width: $tablet-width-only) {
-    margin-top: 54px;
-    margin-bottom: 76px - $margin-botton-li;
+    margin-top: 57px;
+    margin-bottom: 55px - $margin-botton-li;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-top: 47px;
-    margin-bottom: 60px - $margin-botton-li-mobile;
+    margin-top: 44px;
+    margin-bottom: 51px - $margin-botton-li-mobile;
   }
 
   h2 {
-    margin-top: 95px;
+    margin-top: 16px;
     margin-bottom: 15px;
     font-size: 24px;
     line-height: 34px;
@@ -28,12 +28,12 @@ $margin-botton-li-mobile: 29px;
     color: $light-blue;
 
     @media (max-width: $tablet-width-only) {
-      margin-top: 67px;
+      margin-top: 4px;
       margin-bottom: 10px;
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-top: 67px;
+      margin-top: 9px;
       margin-bottom: 10px;
       font-size: 20px;
       line-height: 28px;
@@ -44,7 +44,7 @@ $margin-botton-li-mobile: 29px;
     max-width: 482px;
     margin-top: 0;
     margin-right: 42px;
-    font-family: "PT Mono", "Arial", serif;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -52,6 +52,14 @@ $margin-botton-li-mobile: 29px;
 
     @media (max-width: $tablet-width-only) {
       min-width: 297px;
+
+      span {
+        display: none;
+      }
+    }
+
+    @media (max-width: $tablet-width-only) {
+      margin-bottom: 25px;
     }
 
     @media (max-width: $mobile-width-only) {
@@ -60,12 +68,12 @@ $margin-botton-li-mobile: 29px;
   }
 }
 
-.achievments__list {
+.achievements__list {
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
   margin-top: -4px;
-  margin-left: 126px;
+  margin-left: 125px;
   margin-bottom: 0;
   padding: 0;
 
@@ -83,7 +91,7 @@ $margin-botton-li-mobile: 29px;
   }
 }
 
-.achievments__item {
+.achievements__item {
   position: relative;
   padding-left: 40px;
   margin-right: 30px;
@@ -94,13 +102,14 @@ $margin-botton-li-mobile: 29px;
 
   @media (max-width: $tablet-width-only) {
     margin-right: 0;
-    padding-left: 25px;
+    padding-left: 27px;
     max-width: 345px;
     border-left: 2px solid $light-blue;
-    min-height: 0;
+    min-height: 232px;
   }
 
   @media (max-width: $mobile-width-only) {
+    padding-left: 24px;
     max-width: 100%;
     min-height: 232px;
     margin-bottom: $margin-botton-li-mobile;
@@ -126,21 +135,12 @@ $margin-botton-li-mobile: 29px;
     }
   }
 
-  // &--short-term::after {
-  //   width: 29px;
-  //   background-image: url("../img/stopwatch.svg");
-
-  //   @media (max-width: $tablet-width-only) {
-  //     height: 36px;
-  //     top: 29px;
-  //   }
-
-  //   @media (max-width: $mobile-width-only) {
-  //     top: 20px;
-  //   }
-  // }
-
   &--confidence {
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 25px;
+    }
+
+
     @media (max-width: $tablet-width-only) {
       h2 {
         margin-bottom: 14px;
@@ -151,12 +151,12 @@ $margin-botton-li-mobile: 29px;
   &--personal-cost {
     h2 {
       @media (max-width: $tablet-width-only) {
-        margin-top: 70px;
+        margin-top: 5px;
         margin-bottom: 7px;
       }
 
       @media (max-width: $mobile-width-only) {
-        margin-top: 63px;
+        margin-top: 11px;
         margin-bottom: 16px;
       }
     }
@@ -164,36 +164,22 @@ $margin-botton-li-mobile: 29px;
 
   &--good-suppliers {
     @media (max-width: $mobile-width-only) {
+      margin-bottom: 18px;
+
       p {
         min-width: 250px;
       }
     }
   }
 
-  // &--good-suppliers::after {
-  //   background-image: url("../img/hired.svg");
+  svg {
+    margin-top: 39px;
+    fill: $light-blue;
 
-  //   @media (max-width: $tablet-width-only) {
-  //     width: 32px;
-  //     height: 33px;
-  //   }
-  // }
-
-  // &--confidence::after {
-  //   width: 36px;
-  //   height: 31px;
-  //   background-image: url("../img/detective.svg");
-
-  //   @media (max-width: $tablet-width-only) {
-  //     top: 29px;
-  //     width: 30px;
-  //     height: 26px;
-  //   }
-  // }
-
-  // &--personal-cost::after {
-  //   background-image: url("../img/tag.svg");
-  // }
+    @media (max-width: $tablet-width-only) {
+      margin-top: 24px;
+    }
+  }
 
   &:hover {
     background-color: $light-blue;
