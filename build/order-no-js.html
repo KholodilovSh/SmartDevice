@@ -11,7 +11,6 @@
   <link rel="preload" href="fonts/robotocondensed-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/roboto-medium.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/ptmono-regular.woff2" as="font" type="font/woff2" crossorigin="">
-  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -35,8 +34,10 @@
         <div class="container">
           <button class="order__submit" type="submit">Отправить</button>
         </div>
-        <input class="order__check visually-hidden" id="order-agreement" type="checkbox" name="agreement" checked="">
-        <label class="order__label" for="order-agreement">Я согласен на обработку персональных данных</label>
+        <div class="order__checkbox">
+          <input class="visually-hidden" id="order-agreement" type="checkbox" name="agreement" checked="">
+          <label for="order-agreement">Я согласен на обработку персональных данных</label>
+        </div>
       </div>
     </form>
   </section>

@@ -17,13 +17,13 @@
     }
   }
 
-  &--footer-first__wrap {
+  &--footer-multilines__wrap {
     @media (max-width: $tablet-width-only) {
       max-width: none;
     }
   }
 
-  &--footer-first__wrap2 {
+  &--footer-multilines__wrap2 {
     margin-right: 0;
 
     @media (max-width: $tablet-width-only) {

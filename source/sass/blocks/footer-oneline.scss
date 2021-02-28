@@ -1,9 +1,9 @@
-.footer-second {
+.footer-oneline {
   border-top: 1px solid $grey-border;
   background-color: $grey1;
 }
 
-.footer-second__wrap {
+.footer-oneline__wrap {
   display: flex;
   justify-content: space-between;
   padding-right: 5px;
@@ -16,7 +16,7 @@
   p {
     margin-top: 14px;
     margin-bottom: 14px;
-    font-family: "PT Mono", "Arial", serif;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -43,7 +43,7 @@
   }
 }
 
-.footer-second__only-desktop {
+.footer-oneline__only-desktop {
   @media (max-width: $tablet-width-only) {
     display: none;
   }

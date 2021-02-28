@@ -3,15 +3,15 @@
 (function () {
 
   const order = document.querySelector('.order');
-  const footerFirstParts = document.querySelector('.footer-first__parts');
-  const footerFirstContacts = document.querySelector('.footer-first__contacts');
+  const footerFirstParts = document.querySelector('.footer-multilines__parts');
+  const footerFirstContacts = document.querySelector('.footer-multilines__contacts');
 
   if (order) {
 
     const orderForm = order.querySelector(".order__form");
-    const orderName = order.querySelector(".order__name-js");
-    const orderPhone = order.querySelector(".order__phone-js");
-    const orderText = order.querySelector(".order__text-js");
+    const orderName = order.querySelector(".order__name").querySelector("input");
+    const orderPhone = order.querySelector(".order__telephone").querySelector("input");
+    const orderText = order.querySelector(".order__text").querySelector("input");
 
     var isStorageSupport = true;
     var storageFIO = "";
@@ -24,8 +24,8 @@
       isStorageSupport = false;
     }
 
-    // const mainHeaderOrder = document.querySelector('.main-header__order');
-    const mainHeaderOrder = document.querySelector('.promo__link');
+    const mainHeaderOrder = document.querySelector('.main-header__order');
+    // const mainHeaderOrder = document.querySelector('.promo__link');
     const orderClose = order.querySelector('.order__close');
 
     const onClickMainHeaderOrder = function (evtClick) {
@@ -92,34 +92,34 @@
 
     const onClickMainFooterFirstParts = function () {
 
-      if (footerFirstParts.classList.contains('footer-first__parts--closed')) {
-        footerFirstParts.classList.remove('footer-first__parts--closed');
-        footerFirstParts.classList.add('footer-first__parts--open');
+      if (footerFirstParts.classList.contains('footer-multilines__parts--closed')) {
+        footerFirstParts.classList.remove('footer-multilines__parts--closed');
+        footerFirstParts.classList.add('footer-multilines__parts--open');
       } else {
-        footerFirstParts.classList.remove('footer-first__parts--open');
-        footerFirstParts.classList.add('footer-first__parts--closed');
+        footerFirstParts.classList.remove('footer-multilines__parts--open');
+        footerFirstParts.classList.add('footer-multilines__parts--closed');
       }
     }
 
     const onClickMainFooterFirstContacts = function () {
 
-      if (footerFirstContacts.classList.contains('footer-first__contacts--closed')) {
-        footerFirstContacts.classList.remove('footer-first__contacts--closed');
-        footerFirstContacts.classList.add('footer-first__contacts--open');
+      if (footerFirstContacts.classList.contains('footer-multilines__contacts--closed')) {
+        footerFirstContacts.classList.remove('footer-multilines__contacts--closed');
+        footerFirstContacts.classList.add('footer-multilines__contacts--open');
       } else {
-        footerFirstContacts.classList.remove('footer-first__contacts--open');
-        footerFirstContacts.classList.add('footer-first__contacts--closed');
+        footerFirstContacts.classList.remove('footer-multilines__contacts--open');
+        footerFirstContacts.classList.add('footer-multilines__contacts--closed');
       }
     }
 
     const initSite = () => {
 
       if (footerFirstParts) {
-        footerFirstParts.classList.add('footer-first__parts--closed');
+        footerFirstParts.classList.add('footer-multilines__parts--closed');
         footerFirstParts.addEventListener('click', onClickMainFooterFirstParts);
       }
       if (footerFirstContacts) {
-        footerFirstContacts.classList.add('footer-first__contacts--closed');
+        footerFirstContacts.classList.add('footer-multilines__contacts--closed');
         footerFirstContacts.addEventListener('click', onClickMainFooterFirstContacts);
       }
 

@@ -1,6 +1,6 @@
 $shift: 54px;
 
-.footer-first {
+.footer-multilines {
   margin-top: 65px;
   margin-bottom: 0;
   border-bottom: 55px solid $grey1;
@@ -35,7 +35,7 @@ $shift: 54px;
   }
 }
 
-.footer-first__wrap {
+.footer-multilines__wrap {
   display: flex;
   justify-content: space-between;
 
@@ -44,13 +44,13 @@ $shift: 54px;
   }
 }
 
-.footer-first__wrap1 {
+.footer-multilines__wrap1 {
   @media (max-width: $tablet-width-only) {
     border-bottom: 1px solid $grey-border;
   }
 }
 
-.footer-first__wrap3 {
+.footer-multilines__wrap3 {
   @media (max-width: $tablet-width-only) {
     display: flex;
     justify-content: space-between;
@@ -59,32 +59,32 @@ $shift: 54px;
   @media (max-width: $mobile-width-only) {
     display: block;
   }
+
+  & > p {
+    margin-top: 15px;
+    margin-left: -5px;
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: $grey-letter;
+    text-transform: uppercase;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin-left: 1px;
+      margin-bottom: 31px + $shift;
+      text-align: center;
+    }
+  }
 }
 
-.footer-first__no-on-desktop {
-  margin-top: 15px;
-  margin-left: -5px;
-  font-family: "PT Mono", "Arial", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 24px;
-  letter-spacing: 0.04em;
-  color: $grey-letter;
-  text-transform: uppercase;
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    margin-left: 1px;
-    margin-bottom: 31px + $shift;
-    text-align: center;
-  }
-}
-
-.footer-first__link {
+.footer-multilines__link {
   display: flex;
   align-items: flex-start;
   margin-bottom: 53px;
@@ -114,14 +114,14 @@ $shift: 54px;
     margin-top: 0;
     margin-bottom: 0;
     color: $grey;
-    font-family: "Roboto", "Arial", serif;
+    font-family: "Roboto", "Arial", sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 14px;
   }
 }
 
-.footer-first__socials {
+.footer-multilines__socials {
   display: flex;
   justify-content: space-between;
   padding: 0;
@@ -140,7 +140,7 @@ $shift: 54px;
   }
 }
 
-.footer-first__social {
+.footer-multilines__social {
   position: relative;
 
   &:hover,
@@ -186,8 +186,8 @@ $shift: 54px;
   }
 }
 
-.footer-first__parts,
-.footer-first__contacts {
+.footer-multilines__parts,
+.footer-multilines__contacts {
   ul {
     margin: 0;
     padding-left: 0;
@@ -200,7 +200,7 @@ $shift: 54px;
   }
 
   li {
-    font-family: "PT Mono", "Arial", serif;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -209,7 +209,7 @@ $shift: 54px;
   }
 }
 
-.footer-first__contacts {
+.footer-multilines__contacts {
   margin-right: 3px;
 
   @media (max-width: $tablet-width-only) {
@@ -228,13 +228,13 @@ $shift: 54px;
   }
 }
 
-.footer-first__parts-border {
+.footer-multilines__parts-border {
   @media (max-width: $mobile-width-only) {
     border-bottom: 1px solid $grey-border;
   }
 }
 
-.footer-first__parts {
+.footer-multilines__parts {
   @media (max-width: $mobile-width-only) {
     margin-bottom: 0;
   }
@@ -258,7 +258,7 @@ $shift: 54px;
   }
 }
 
-.footer-first__wrap2 {
+.footer-multilines__wrap2 {
   display: flex;
   justify-content: space-between;
   width: 70%;
@@ -274,12 +274,12 @@ $shift: 54px;
   }
 }
 
-.footer-first__parts,
-.footer-first__contacts {
+.footer-multilines__parts,
+.footer-multilines__contacts {
   @media (max-width: $mobile-width-only) {
     position: relative;
 
-    & h3:hover {
+    h3:hover {
       cursor: pointer;
       color: $light-blue;
     }
@@ -289,11 +289,11 @@ $shift: 54px;
         display: none;
       }
 
-      & h3::after {
+      h3::after {
         content: "";
         position: absolute;
-        top: 8px;
-        right: 8px;
+        top: -2px;
+        right: 2px;
         width: 16px;
         height: 16px;
         background-image: url("../img/plus.svg");
@@ -301,11 +301,11 @@ $shift: 54px;
     }
 
     &--open {
-      & h3::after {
+      h3::after {
         content: "";
         position: absolute;
-        top: 8px;
-        right: 8px;
+        top: 4px;
+        right: 3px;
         width: 16px;
         height: 1px;
         background-image: url("../img/minus.svg");

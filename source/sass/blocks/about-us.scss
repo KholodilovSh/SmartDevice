@@ -54,13 +54,14 @@
 
     @media (max-width: $tablet-width-only) {
       margin-left: 186px;
-      margin-bottom: 24px;
+      margin-bottom: 25px;
       font-size: 32px;
       line-height: 45px;
     }
 
     @media (max-width: $mobile-width-only) {
       margin-left: 0;
+      margin-bottom: 22px;
       font-size: 28px;
       line-height: 40px;
     }
@@ -70,17 +71,18 @@
     max-width: 984px;
     margin-left: 303px;
     margin-bottom: 22px;
-    font-family: "PT Mono", "Arial", serif;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 21px;
     color: $grey;
 
     @media (max-width: $tablet-width-only) {
-      margin-left: 186px;
+      margin-left: 188px;
       margin-bottom: 20px;
       max-width: 532px;
+      line-height: 22px;
     }
 
     @media (max-width: $mobile-width-only) {
@@ -89,16 +91,16 @@
       line-height: 21px;
     }
   }
-}
 
-.about-us__span {
-  @media (max-width: $tablet-width-only) {
-    display: none;
+  span {
+    @media (max-width: $tablet-width-only) {
+      display: none;
+    }
   }
 }
 
 .about-us__button {
-  margin-top: 16px;
+  margin-top: 20px;
   margin-left: 303px;
   cursor: pointer;
   width: 180px;
