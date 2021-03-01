@@ -226,6 +226,8 @@ $shift: 54px;
       width: 280px;
     }
   }
+
+  @include footer-js;
 }
 
 .footer-multilines__parts-border {
@@ -256,6 +258,8 @@ $shift: 54px;
     margin-left: -3px;
     margin-right: 78px;
   }
+
+  @include footer-js;
 }
 
 .footer-multilines__wrap2 {
@@ -271,45 +275,5 @@ $shift: 54px;
   @media (max-width: $mobile-width-only) {
     display: block;
     margin-top: 29px;
-  }
-}
-
-.footer-multilines__parts,
-.footer-multilines__contacts {
-  @media (max-width: $mobile-width-only) {
-    position: relative;
-
-    h3:hover {
-      cursor: pointer;
-      color: $light-blue;
-    }
-
-    &--closed {
-      ul {
-        display: none;
-      }
-
-      h3::after {
-        content: "";
-        position: absolute;
-        top: -2px;
-        right: 2px;
-        width: 16px;
-        height: 16px;
-        background-image: url("../img/plus.svg");
-      }
-    }
-
-    &--open {
-      h3::after {
-        content: "";
-        position: absolute;
-        top: 4px;
-        right: 3px;
-        width: 16px;
-        height: 1px;
-        background-image: url("../img/minus.svg");
-      }
-    }
   }
 }

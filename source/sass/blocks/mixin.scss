@@ -47,3 +47,42 @@
     opacity: 0.5;
   }
 }
+
+@mixin footer-js {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+
+    h3:hover {
+      cursor: pointer;
+      color: $light-blue;
+    }
+
+    &--closed {
+      ul {
+        display: none;
+      }
+
+      h3::after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        right: 2px;
+        width: 16px;
+        height: 16px;
+        background-image: url("../img/plus.svg");
+      }
+    }
+
+    &--open {
+      h3::after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        right: 3px;
+        width: 16px;
+        height: 1px;
+        background-image: url("../img/minus.svg");
+      }
+    }
+  }
+}
