@@ -25,7 +25,6 @@
     }
 
     const mainHeaderOrder = document.querySelector('.main-header__order');
-    // const mainHeaderOrder = document.querySelector('.promo__link');
     const orderClose = order.querySelector('.order__close');
 
     const onClickMainHeaderOrder = function (evtClick) {
