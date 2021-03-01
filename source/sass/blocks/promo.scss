@@ -182,17 +182,17 @@
     margin-left: 2px;
     width: 287px;
   }
-}
 
-.promo__link-text {
-  @media (max-width: $mobile-width-only) {
-    display: none;
+  &--not-mobile {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
   }
-}
 
-.promo__link-mobile-text {
-  @media (min-width: $mobile-width-only) {
-    display: none;
+  &--mobile {
+    @media (min-width: $mobile-width-only) {
+      display: none;
+    }
   }
 }
 
