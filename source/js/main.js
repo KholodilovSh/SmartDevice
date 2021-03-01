@@ -8,18 +8,18 @@
 
   if (order) {
 
-    const orderForm = order.querySelector(".order__form");
-    const orderName = order.querySelector(".order__name").querySelector("input");
-    const orderPhone = order.querySelector(".order__telephone").querySelector("input");
-    const orderText = order.querySelector(".order__text").querySelector("input");
+    const orderForm = order.querySelector('.order__form');
+    const orderName = order.querySelector('.order__name').querySelector('input');
+    const orderPhone = order.querySelector('.order__telephone').querySelector('input');
+    const orderText = order.querySelector('.order__text').querySelector('input');
 
     var isStorageSupport = true;
-    var storageFIO = "";
-    var storagePhone = "";
+    var storageFIO = '';
+    var storagePhone = '';
 
     try {
-      storageFIO = localStorage.getItem("FIO");
-      storagePhone = localStorage.getItem("phone");
+      storageFIO = localStorage.getItem('FIO');
+      storagePhone = localStorage.getItem('phone');
     } catch (err) {
       isStorageSupport = false;
     }
@@ -53,17 +53,17 @@
           evt.preventDefault();
         } else {
           if (isStorageSupport) {
-            localStorage.setItem("FIO", orderName.value);
-            localStorage.setItem("phone", orderPhone.value);
+            localStorage.setItem('FIO', orderName.value);
+            localStorage.setItem('phone', orderPhone.value);
           }
-        };
+        }
       };
 
       const onMenuClose = function () {
         order.classList.remove('order--show');
         document.body.classList.remove('body--overflow-hidden');
         orderClose.removeEventListener('click', onClickMenuClose);
-        document.body.removeEventListener('click',onClickOverlay);
+        document.body.removeEventListener('click', onClickOverlay);
         orderForm.removeEventListener('submit', onSubmit);
 
         mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
@@ -98,7 +98,7 @@
         footerFirstParts.classList.remove('footer-multilines__parts--open');
         footerFirstParts.classList.add('footer-multilines__parts--closed');
       }
-    }
+    };
 
     const onClickMainFooterFirstContacts = function () {
 
@@ -109,7 +109,7 @@
         footerFirstContacts.classList.remove('footer-multilines__contacts--open');
         footerFirstContacts.classList.add('footer-multilines__contacts--closed');
       }
-    }
+    };
 
     const initSite = () => {
 
