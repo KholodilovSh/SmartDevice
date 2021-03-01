@@ -136,6 +136,16 @@
     if (order && mainHeaderOrder) {
       mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
     }
+
+    // IMask.
+    // var phoneMask = IMask(document.getElementById('phone-mask'), {
+    //   mask: '+{7}(000)000-00-00'
+    // }).on('accept', function () {
+    //   document.getElementById('phone-complete').style.display = '';
+    //   document.getElementById('phone-unmasked').innerHTML = phoneMask.unmaskedValue;
+    // }).on('complete', function () {
+    //   document.getElementById('phone-complete').style.display = 'inline-block';
+    // });
   };
 
   window.addEventListener('load', initSite);
