@@ -1,0 +1,49 @@
+@mixin form-inputs {
+  input,
+  textarea {
+    padding-left: 15px;
+    border: none;
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: $light-blue1;
+
+    &::placeholder {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 1px solid $grey;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+@mixin form-submit {
+  height: 45px;
+  border: 1px solid $white;
+  border-radius: 5px;
+  color: $white;
+  background-color: $light-blue;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+
+  &:hover,
+  &:focus {
+    color: $grey;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $grey;
+    opacity: 0.5;
+  }
+}
