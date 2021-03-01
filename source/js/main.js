@@ -3,6 +3,7 @@
 (function () {
 
   const order = document.querySelector('.order');
+  const under = document.querySelector('.under');
   const mainHeaderOrder = document.querySelector('.main-header__order');
   const footerFirstParts = document.querySelector('.footer-multilines__parts');
   const footerFirstContacts = document.querySelector('.footer-multilines__contacts');
@@ -64,8 +65,12 @@
         order.classList.remove('order--show');
         document.body.classList.remove('body--overflow-hidden');
         orderClose.removeEventListener('click', onClickMenuClose);
-        document.body.removeEventListener('click', onClickOverlay);
+        order.removeEventListener('click', onClickOverlay);
         orderForm.removeEventListener('submit', onSubmit);
+        if (under) {
+          under.classList.remove('under--show');
+          under.removeEventListener('click', onClickOverlay);
+        }
 
         mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
       };
@@ -78,6 +83,11 @@
       orderForm.addEventListener('submit', onSubmit);
       orderClose.addEventListener('click', onClickMenuClose);
       document.addEventListener('keydown', onEscapeModalMenu);
+
+      if (under) {
+        under.classList.add('under--show');
+        under.addEventListener('click', onClickOverlay);
+      }
 
       if (storageFIO) {
         orderName.value = storageFIO;
@@ -126,6 +136,16 @@
     if (order && mainHeaderOrder) {
       mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
     }
+
+    // IMask.
+    // var phoneMask = IMask(document.getElementById('phone-mask'), {
+    //   mask: '+{7}(000)000-00-00'
+    // }).on('accept', function () {
+    //   document.getElementById('phone-complete').style.display = '';
+    //   document.getElementById('phone-unmasked').innerHTML = phoneMask.unmaskedValue;
+    // }).on('complete', function () {
+    //   document.getElementById('phone-complete').style.display = 'inline-block';
+    // });
   };
 
   window.addEventListener('load', initSite);
