@@ -18,15 +18,15 @@
     const orderForm = order.querySelector('.order__form');
     const orderName = order.querySelector('.order__name').querySelector('input');
     const orderPhone = order.querySelector('.order__telephone').querySelector('input');
-    const orderText = order.querySelector('.order__text').querySelector('input');
+    const orderText = order.querySelector('.order__text').querySelector('textarea');
     const feedbackTelephone = document.querySelector('.feedback__telephone').querySelector('input');
 
     if (feedbackTelephone) {
-      const phoneMask = IMask(feedbackTelephone, maskOptions);
+      new window.IMask(feedbackTelephone, maskOptions);
     }
 
     if (orderPhone) {
-      const orderPhoneMask = IMask(orderPhone, maskOptions);
+      new window.IMask(orderPhone, maskOptions);
     }
 
     var isStorageSupport = true;
@@ -87,11 +87,6 @@
 
         mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
       };
-
-      if (orderPhone) {
-        const orderPhoneMask = IMask(orderPhone, maskOptions);
-      }
-
 
       mainHeaderOrder.removeEventListener('click', onClickMainHeaderOrder);
 
