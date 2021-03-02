@@ -7,3 +7,5 @@ env:
 extends:
   "htmlacademy/es5"
 
+rules:
+  no-new: 0
