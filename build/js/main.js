@@ -9,12 +9,25 @@
   const footerFirstContacts = document.querySelector('.footer-multilines__contacts');
   var onClickMainHeaderOrder;
 
+  const maskOptions = {
+    mask: '+{7}(000)-000-00-00'
+  };
+
   if (order && mainHeaderOrder) {
 
     const orderForm = order.querySelector('.order__form');
     const orderName = order.querySelector('.order__name').querySelector('input');
     const orderPhone = order.querySelector('.order__telephone').querySelector('input');
     const orderText = order.querySelector('.order__text').querySelector('input');
+    const feedbackTelephone = document.querySelector('.feedback__telephone').querySelector('input');
+
+    if (feedbackTelephone) {
+      const phoneMask = IMask(feedbackTelephone, maskOptions);
+    }
+
+    if (orderPhone) {
+      const orderPhoneMask = IMask(orderPhone, maskOptions);
+    }
 
     var isStorageSupport = true;
     var storageFIO = '';
@@ -28,6 +41,16 @@
     }
 
     const orderClose = order.querySelector('.order__close');
+
+    // IMask.
+    // var phoneMask = IMask(document.getElementById('phone-mask'), {
+    //   mask: '+{7}(000)000-00-00'
+    // }).on('accept', function () {
+    //   document.getElementById('phone-complete').style.display = '';
+    //   document.getElementById('phone-unmasked').innerHTML = phoneMask.unmaskedValue;
+    // }).on('complete', function () {
+    //   document.getElementById('phone-complete').style.display = 'inline-block';
+    // });
 
     onClickMainHeaderOrder = function (evtClick) {
 
@@ -75,6 +98,11 @@
         mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
       };
 
+      if (orderPhone) {
+        const orderPhoneMask = IMask(orderPhone, maskOptions);
+      }
+
+
       mainHeaderOrder.removeEventListener('click', onClickMainHeaderOrder);
 
       order.classList.add('order--show');
@@ -97,7 +125,6 @@
         orderPhone.value = storagePhone;
       }
       orderName.focus();
-
     };
   }
 
@@ -136,16 +163,6 @@
     if (order && mainHeaderOrder) {
       mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
     }
-
-    // IMask.
-    // var phoneMask = IMask(document.getElementById('phone-mask'), {
-    //   mask: '+{7}(000)000-00-00'
-    // }).on('accept', function () {
-    //   document.getElementById('phone-complete').style.display = '';
-    //   document.getElementById('phone-unmasked').innerHTML = phoneMask.unmaskedValue;
-    // }).on('complete', function () {
-    //   document.getElementById('phone-complete').style.display = 'inline-block';
-    // });
   };
 
   window.addEventListener('load', initSite);
