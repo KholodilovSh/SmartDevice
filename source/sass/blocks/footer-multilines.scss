@@ -60,7 +60,7 @@ $shift: 54px;
     display: block;
   }
 
-  & > p {
+  p {
     margin-top: 15px;
     margin-left: -5px;
     font-family: "PT Mono", "Arial", sans-serif;
@@ -87,6 +87,7 @@ $shift: 54px;
 .footer-multilines__link {
   display: flex;
   align-items: flex-start;
+  color: $black1;
   margin-bottom: 53px;
 
   @media (max-width: $tablet-width-only) {
@@ -99,25 +100,6 @@ $shift: 54px;
 
   svg {
     margin-right: 16px;
-  }
-
-  h2 {
-    margin-top: 5px;
-    margin-bottom: 0;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 29px;
-    color: $black1;
-  }
-
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-    color: $grey;
-    font-family: "Roboto", "Arial", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14px;
   }
 }
 
@@ -199,6 +181,7 @@ $shift: 54px;
     }
   }
 
+  p,
   li {
     font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
