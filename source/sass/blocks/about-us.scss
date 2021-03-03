@@ -135,3 +135,54 @@
     margin-left: 0;
   }
 }
+
+.about-us__link {
+  position: relative;
+  display: block;
+  margin-top: 20px;
+  margin-left: 303px;
+  width: 180px;
+  height: 45px;
+  border: 1px solid $light-blue;
+  border-radius: 5px;
+  background-color: $white;
+
+  p {
+    position: absolute;
+    width: 350px;
+    left: 42px;
+    top: 14px;
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: $light-blue;
+    text-transform: uppercase;
+
+    @media (max-width: $tablet-width-only) {
+      left: 33px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    p {
+      color: $grey;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 22px;
+    margin-left: 188px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: -10px;
+    margin-left: 0;
+  }
+}

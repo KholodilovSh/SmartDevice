@@ -138,16 +138,13 @@
       opacity: 0.7;
     }
   }
-
-  input:active,
-  input:focus {
-    & + label,
-    & + label::after,
-    & + label::before {
-      color: $grey;
-    }
-  }
 }
+
+.order__checkbox input:active + label,
+.order__checkbox input:focus + label {
+  color: $grey;
+}
+
 
 .order__close {
   position: absolute;

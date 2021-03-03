@@ -2,35 +2,6 @@
   padding-top: 316px;
   height: 879px;
   background-color: $main-ground;
-  background-image: url("../img/background_desktop@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-
-  @media (min-resolution: 1.5dppx) {
-    background-image: url("../img/background_desktop@2x.jpg");
-  }
-
-  @media (max-width: $tablet-width-only) {
-    display: block;
-    padding-top: 189px;
-    height: 687px;
-    background-image: url("../img/background_tablet@1x.jpg");
-
-    @media (min-resolution: 1.5dppx) {
-      background-image: url("../img/background_tablet@2x.jpg");
-    }
-  }
-
-  @media (max-width: $mobile-width-only) {
-    padding-top: 286px;
-    height: 646px;
-    background-image: url("../img/background_mobile@1x.jpg");
-
-    @media (min-resolution: 1.5dppx) {
-      background-image: url("../img/background_mobile@2x.jpg");
-    }
-  }
 
   h2 {
     position: relative;
@@ -138,6 +109,7 @@
   position: relative;
   display: block;
   margin-left: 94px;
+  padding: 19px 45px;
   z-index: 1;
   cursor: pointer;
   width: 407px;
@@ -152,17 +124,6 @@
   color: $white;
   background-color: $light-blue;
 
-  span {
-    position: absolute;
-    width: 350px;
-    left: 45px;
-    top: 18px;
-
-    @media (max-width: $tablet-width-only) {
-      left: 33px;
-    }
-  }
-
   &:hover,
   &:focus {
     color: $grey;
@@ -174,6 +135,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
+    padding: 19px 31px;
     margin-left: 42px;
     width: 379px;
   }

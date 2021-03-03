@@ -7,7 +7,7 @@
   const mainHeaderOrder = document.querySelector('.main-header__order');
   const footerFirstParts = document.querySelector('.footer-multilines__parts');
   const footerFirstContacts = document.querySelector('.footer-multilines__contacts');
-  var onClickMainHeaderOrder;
+  let onClickMainHeaderOrder;
 
   const maskOptions = {
     mask: '+{7}(000)-000-00-00'
@@ -16,10 +16,51 @@
   if (order && mainHeaderOrder) {
 
     const orderForm = order.querySelector('.order__form');
-    const orderName = order.querySelector('.order__name').querySelector('input');
-    const orderPhone = order.querySelector('.order__telephone').querySelector('input');
-    const orderText = order.querySelector('.order__text').querySelector('textarea');
-    const feedbackTelephone = document.querySelector('.feedback__telephone').querySelector('input');
+    const orderName = order.querySelector('.order__name input');
+    const orderPhone = order.querySelector('.order__telephone input');
+    const orderText = order.querySelector('.order__text textarea');
+    const feedbackTelephone = document.querySelector('.feedback__telephone input');
+
+    const onEscapeModalMenu = (evt) => {
+      if (evt.key === 'Escape') {
+        closeForm();
+      }
+    };
+
+    const onClickOverlay = function () {
+      closeForm();
+    };
+
+    const onClickMenuClose = function () {
+      closeForm();
+    };
+
+    const onSubmitForm = function (evt) {
+
+      if (!orderName.value || !orderPhone.value || !orderText.value) {
+        evt.preventDefault();
+      } else {
+        if (isStorageSupport) {
+          localStorage.setItem('FIO', orderName.value);
+          localStorage.setItem('phone', orderPhone.value);
+        }
+      }
+    };
+
+    const closeForm = function () {
+      order.classList.remove('order--show');
+      document.body.classList.remove('body--overflow-hidden');
+      orderClose.removeEventListener('click', onClickMenuClose);
+      order.removeEventListener('click', onClickOverlay);
+      orderForm.removeEventListener('submit', onSubmitForm);
+      if (under) {
+        under.classList.remove('under--show');
+        under.removeEventListener('click', onClickOverlay);
+      }
+
+      mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
+    };
+
 
     if (feedbackTelephone) {
       new window.IMask(feedbackTelephone, maskOptions);
@@ -29,9 +70,9 @@
       new window.IMask(orderPhone, maskOptions);
     }
 
-    var isStorageSupport = true;
-    var storageFIO = '';
-    var storagePhone = '';
+    let isStorageSupport = true;
+    let storageFIO = '';
+    let storagePhone = '';
 
     try {
       storageFIO = localStorage.getItem('FIO');
@@ -48,52 +89,52 @@
         evtClick.preventDefault();
       }
 
-      const onEscapeModalMenu = (evt) => {
-        if (evt.key === 'Escape') {
-          onMenuClose();
-        }
-      };
+      // const onEscapeModalMenu = (evt) => {
+      //   if (evt.key === 'Escape') {
+      //     closeForm();
+      //   }
+      // };
 
-      const onClickOverlay = function () {
-        onMenuClose();
-      };
+      // const onClickOverlay = function () {
+      //   closeForm();
+      // };
 
-      const onClickMenuClose = function () {
-        onMenuClose();
-      };
+      // const onClickMenuClose = function () {
+      //   closeForm();
+      // };
 
-      const onSubmit = function (evt) {
+      // const onSubmitForm = function (evt) {
 
-        if (!orderName.value || !orderPhone.value || !orderText.value) {
-          evt.preventDefault();
-        } else {
-          if (isStorageSupport) {
-            localStorage.setItem('FIO', orderName.value);
-            localStorage.setItem('phone', orderPhone.value);
-          }
-        }
-      };
+      //   if (!orderName.value || !orderPhone.value || !orderText.value) {
+      //     evt.preventDefault();
+      //   } else {
+      //     if (isStorageSupport) {
+      //       localStorage.setItem('FIO', orderName.value);
+      //       localStorage.setItem('phone', orderPhone.value);
+      //     }
+      //   }
+      // };
 
-      const onMenuClose = function () {
-        order.classList.remove('order--show');
-        document.body.classList.remove('body--overflow-hidden');
-        orderClose.removeEventListener('click', onClickMenuClose);
-        order.removeEventListener('click', onClickOverlay);
-        orderForm.removeEventListener('submit', onSubmit);
-        if (under) {
-          under.classList.remove('under--show');
-          under.removeEventListener('click', onClickOverlay);
-        }
+      // const closeForm = function () {
+      //   order.classList.remove('order--show');
+      //   document.body.classList.remove('body--overflow-hidden');
+      //   orderClose.removeEventListener('click', onClickMenuClose);
+      //   order.removeEventListener('click', onClickOverlay);
+      //   orderForm.removeEventListener('submit', onSubmitForm);
+      //   if (under) {
+      //     under.classList.remove('under--show');
+      //     under.removeEventListener('click', onClickOverlay);
+      //   }
 
-        mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
-      };
+      //   mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
+      // };
 
       mainHeaderOrder.removeEventListener('click', onClickMainHeaderOrder);
 
       order.classList.add('order--show');
       document.body.classList.add('body--overflow-hidden');
 
-      orderForm.addEventListener('submit', onSubmit);
+      orderForm.addEventListener('submit', onSubmitForm);
       orderClose.addEventListener('click', onClickMenuClose);
       document.addEventListener('keydown', onEscapeModalMenu);
 
@@ -135,7 +176,7 @@
     }
   };
 
-  const initSite = () => {
+  const onLoadSite = function () {
 
     if (footerFirstParts) {
       footerFirstParts.classList.add('footer-multilines__parts--closed');
@@ -150,9 +191,6 @@
     }
   };
 
-  window.addEventListener('load', initSite);
+  window.addEventListener('load', onLoadSite);
 
-  window.main = {
-    initSite
-  };
 })();

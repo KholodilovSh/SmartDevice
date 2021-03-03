@@ -1,9 +1,9 @@
-.footer-oneline {
+.footer-one-line {
   border-top: 1px solid $grey-border;
   background-color: $grey1;
 }
 
-.footer-oneline__wrap {
+.footer-one-line__wrap {
   display: flex;
   justify-content: space-between;
   padding-right: 5px;
@@ -43,7 +43,7 @@
   }
 }
 
-.footer-oneline__wrap-desktop {
+.footer-one-line__wrap-desktop {
   display: flex;
   justify-content: space-between;
   width: 457px;
@@ -53,7 +53,7 @@
   }
 }
 
-.footer-oneline__wrap-middle {
+.footer-one-line__wrap-middle {
   display: flex;
   justify-content: space-between;
   width: 816px;

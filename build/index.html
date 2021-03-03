@@ -15,15 +15,15 @@
 
 <body>
   <header class="main-header">
+    <h1 class="visually-hidden">Smart Device</h1>
     <div class="main-header__wrap container">
       <a class="main-header__link">
-        <svg width="52" height="52" viewBox="0 0 52 52">
-          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        <svg width="202" height="53" viewBox="0 0 202 53">
+          <use class="main-header__use" xlink:href="img/sprite_auto.svg#icon-logo"></use>
         </svg>
-        <div>
-          <h1>Smart Device</h1>
-          <p>умные технологии</p>
-        </div>
+        <svg width="53" height="53" viewBox="0 0 53 53">
+          <use class="main-header__use-mobile" xlink:href="img/sprite_auto.svg#icon-logo-mobile"></use>
+        </svg>
       </a>
 
       <div class="main-header__wrap-right">
@@ -34,7 +34,7 @@
           <p>+7 (495) 000 52 52</p>
         </a>
         <a class="main-header__order" href="order-no-js.html">
-          <p>Заказать звонок</p>
+          Заказать звонок
         </a>
       </div>
     </div>
@@ -47,10 +47,10 @@
           <h2>Печатные платы</h2>
           <h3>производство и монтаж, поставка комплектующих, блоков и модулей</h3>
           <a class="promo__link promo__link--not-mobile" href="#form">
-            <span>Получить бесплатную консультацию</span>
+            Получить бесплатную консультацию
           </a>
           <a class="promo__link promo__link--mobile" href="#form">
-            <span>Бесплатная консультация</span>
+            Бесплатная консультация
           </a>
           <a class="promo__scroll" href="#achievements">
             Скролл вниз
@@ -85,21 +85,21 @@
           </svg>
           <h2>Крупные поставщики</h2>
           <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
-            Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+            Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
         </li>
         <li class="achievements__item achievements__item--confidence">
           <svg width="36" height="31" viewBox="0 0 36 31">
             <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
           </svg>
           <h2>Полная конфиденциальность</h2>
-          <p>По желанию клиента<span>&nbsp;</span> мы обеспечиваем полную конфеденциальность.</p>
+          <p>По желанию клиента мы обеспечиваем полную конфиденциальность.</p>
         </li>
         <li class="achievements__item achievements__item--personal-cost">
           <svg width="36" height="31" viewBox="0 0 36 31">
             <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
           </svg>
           <h2>Персонализация стоимости</h2>
-          <p>Мы<span>&nbsp;</span> подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену,
+          <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену,
             которая Вас
             устраивает.</p>
         </li>
@@ -114,9 +114,9 @@
           РоссАвтоПрома
           (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники
           России.</span></p>
-      <button class="about-us__button" type="button">
-        Подробнее
-      </button>
+      <a class="about-us__link" href="#">
+        <p>Подробнее</p>
+      </a>
     </section>
     <section class="variants">
       <div class="container">
@@ -182,13 +182,9 @@
           <div class="container">
             <div class="footer-multilines__wrap3">
               <a class="footer-multilines__link">
-                <svg width="52" height="52" viewBox="0 0 52 52">
+                <svg width="216" height="52" viewBox="0 0 216 52">
                   <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
                 </svg>
-                <div>
-                  <h2>Service Device</h2>
-                  <p>умные технологии</p>
-                </div>
               </a>
               <p>1999-2018 SD Service Devices</p>
               <ul class="footer-multilines__socials">
@@ -221,8 +217,8 @@
           </div>
           <div class="footer-multilines__contacts">
             <h3>Наш офис</h3>
+            <p>г. Мытищи, Олимпийский проспект, д.10</p>
             <ul>
-              <li>г. Мытищи, Олимпийский проспект, д.10</li>
               <li>
                 <a href="tel:+74955894050">
                   +7 (495) 589-40-50
@@ -243,11 +239,11 @@
         </div>
       </div>
     </section>
-    <section class="footer-oneline">
+    <section class="footer-one-line">
       <h2 class="visually-hidden">Нижняя строка подвала</h2>
-      <div class="footer-oneline__wrap container">
-        <div class="footer-oneline__wrap-middle">
-          <div class="footer-oneline__wrap-desktop">
+      <div class="footer-one-line__wrap container">
+        <div class="footer-one-line__wrap-middle">
+          <div class="footer-one-line__wrap-desktop">
             <p>Все права защищены</p>
             <p>1999-2018 SD Service Devices</p>
           </div>
@@ -277,9 +273,8 @@
           <label for="order-text" class="visually-hidden">Ваш вопрос</label>
           <textarea name="text" id="order-text" placeholder="Ваш вопрос" required=""></textarea>
         </div>
-        <div class="container">
-          <button class="order__submit" type="submit">Отправить</button>
-        </div>
+        <button class="order__submit" type="submit">Отправить</button>
+
         <div class="order__checkbox">
           <input class="visually-hidden" id="order-agreement" type="checkbox" name="agreement" checked="">
           <label for="order-agreement">Я согласен на обработку персональных данных</label>
