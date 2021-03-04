@@ -83,6 +83,10 @@ $shift-psevdo-mobile: 23px;
     }
   }
 
+  a {
+    display: block;
+  }
+
   &:hover,
   &:focus {
     color: $grey;
