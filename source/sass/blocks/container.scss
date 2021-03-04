@@ -16,22 +16,4 @@
       max-width: 715px - 2*68px;
     }
   }
-
-  &--footer-multilines__wrap {
-    @media (max-width: $tablet-width-only) {
-      max-width: none;
-    }
-  }
-
-  &--footer-multilines__wrap2 {
-    margin-right: 0;
-
-    @media (max-width: $tablet-width-only) {
-      margin-right: auto;
-    }
-
-    @media (max-width: $mobile-width-only) {
-      max-width: none;
-    }
-  }
 }

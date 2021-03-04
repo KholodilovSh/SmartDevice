@@ -1,18 +1,21 @@
 $shift: 54px;
 
 .footer-multilines {
-  margin-top: 68px;
-  margin-bottom: 0;
-  border-bottom: 55px solid $grey1;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1412px;
+  margin: 63px auto 55px auto;
 
   @media (max-width: $tablet-width-only) {
+    display: block;
     margin-top: 2px;
+    margin-bottom: 39px;
     padding-top: 19px;
     background-color: $grey1;
-    border-bottom: 37px solid $grey1;
   }
 
   @media (max-width: $mobile-width-only) {
+    margin-bottom: 0;
     padding-top: 41px;
     border-bottom: none;
   }
@@ -35,22 +38,13 @@ $shift: 54px;
   }
 }
 
-.footer-multilines__wrap {
-  display: flex;
-  justify-content: space-between;
-
-  @media (max-width: $tablet-width-only) {
-    display: block;
-  }
-}
-
-.footer-multilines__wrap1 {
+.footer-multilines__wrap-outer {
   @media (max-width: $tablet-width-only) {
     border-bottom: 1px solid $grey-border;
   }
 }
 
-.footer-multilines__wrap3 {
+.footer-multilines__wrap-socials {
   @media (max-width: $tablet-width-only) {
     display: flex;
     justify-content: space-between;
@@ -223,15 +217,10 @@ $shift: 54px;
   @include footer-js;
 }
 
-.footer-multilines__parts-border {
-  @media (max-width: $mobile-width-only) {
-    border-bottom: 1px solid $grey-border;
-  }
-}
-
 .footer-multilines__parts {
   @media (max-width: $mobile-width-only) {
     margin-bottom: 0;
+    border-bottom: 1px solid $grey-border;
   }
 
   ul {
@@ -255,14 +244,16 @@ $shift: 54px;
   @include footer-js;
 }
 
-.footer-multilines__wrap2 {
+.footer-multilines__wrap-parts-office {
   display: flex;
   justify-content: space-between;
   width: 70%;
 
   @media (max-width: $tablet-width-only) {
     margin-top: 38px;
-    width: 100%;
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (max-width: $mobile-width-only) {

@@ -58,7 +58,8 @@
     }
 
     &--closed {
-      ul {
+      ul,
+      p {
         display: none;
       }
 
