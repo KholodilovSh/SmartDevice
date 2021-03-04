@@ -89,46 +89,6 @@
         evtClick.preventDefault();
       }
 
-      // const onEscapeModalMenu = (evt) => {
-      //   if (evt.key === 'Escape') {
-      //     closeForm();
-      //   }
-      // };
-
-      // const onClickOverlay = function () {
-      //   closeForm();
-      // };
-
-      // const onClickMenuClose = function () {
-      //   closeForm();
-      // };
-
-      // const onSubmitForm = function (evt) {
-
-      //   if (!orderName.value || !orderPhone.value || !orderText.value) {
-      //     evt.preventDefault();
-      //   } else {
-      //     if (isStorageSupport) {
-      //       localStorage.setItem('FIO', orderName.value);
-      //       localStorage.setItem('phone', orderPhone.value);
-      //     }
-      //   }
-      // };
-
-      // const closeForm = function () {
-      //   order.classList.remove('order--show');
-      //   document.body.classList.remove('body--overflow-hidden');
-      //   orderClose.removeEventListener('click', onClickMenuClose);
-      //   order.removeEventListener('click', onClickOverlay);
-      //   orderForm.removeEventListener('submit', onSubmitForm);
-      //   if (under) {
-      //     under.classList.remove('under--show');
-      //     under.removeEventListener('click', onClickOverlay);
-      //   }
-
-      //   mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
-      // };
-
       mainHeaderOrder.removeEventListener('click', onClickMainHeaderOrder);
 
       order.classList.add('order--show');
