@@ -1,7 +1,7 @@
 $shift: 54px;
 
 .footer-multilines {
-  margin-top: 65px;
+  margin-top: 68px;
   margin-bottom: 0;
   border-bottom: 55px solid $grey1;
 
@@ -13,7 +13,7 @@ $shift: 54px;
   }
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 46px;
+    padding-top: 41px;
     border-bottom: none;
   }
 
@@ -62,7 +62,7 @@ $shift: 54px;
 
   p {
     margin-top: 15px;
-    margin-left: -5px;
+    margin-left: -22px;
     font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -89,13 +89,14 @@ $shift: 54px;
   align-items: flex-start;
   color: $black1;
   margin-bottom: 53px;
+  margin-left: 0;
 
   @media (max-width: $tablet-width-only) {
     margin-bottom: 23px;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-left: 37px;
+    margin-left: 36px;
   }
 
   svg {
@@ -189,6 +190,15 @@ $shift: 54px;
     font-size: 15px;
     line-height: 25px;
     color: $grey-letter;
+  }
+
+  p {
+    margin-bottom: -1px;
+
+    @media (max-width: $mobile-width-only) {
+      margin-top: 5px;
+      width: 250px;
+    }
   }
 }
 

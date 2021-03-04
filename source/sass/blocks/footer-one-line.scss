@@ -9,7 +9,7 @@
   padding-right: 5px;
 
   @media (max-width: $mobile-width-only) {
-    margin-top: 28px;
+    margin-top: 6px;
     padding-bottom: 26px;
   }
 
@@ -33,7 +33,7 @@
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 21px;
+      margin-bottom: 0;
       text-align: center;
     }
   }
