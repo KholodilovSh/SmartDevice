@@ -11,7 +11,7 @@ $shift: 54px;
     margin-top: 2px;
     margin-bottom: 39px;
     padding-top: 19px;
-    background-color: $grey1;
+    background-color: $grey-background;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -28,7 +28,7 @@ $shift: 54px;
     line-height: 16px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: $black2;
+    color: $black-background;
 
     @media (max-width: $mobile-width-only) {
       margin-top: 28px;
@@ -81,7 +81,6 @@ $shift: 54px;
 .footer-multilines__link {
   display: flex;
   align-items: flex-start;
-  color: $black1;
   margin-bottom: 53px;
   margin-left: 0;
 

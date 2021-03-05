@@ -18,12 +18,20 @@
     <h1 class="visually-hidden">Smart Device</h1>
     <div class="main-header__wrap container">
       <a class="main-header__link">
-        <svg class="main-header__use" width="202" height="53" viewBox="0 0 202 53">
-          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-        </svg>
-        <svg width="53" height="53" viewBox="0 0 53 53">
-          <use class="main-header__use-mobile" xlink:href="img/sprite_auto.svg#icon-logo-mobile"></use>
-        </svg>
+        <picture>
+          <!-- 1х: 202px; 2x: 404px -->
+          <source type="image/webp" media="(min-width: 1024px)"
+            srcset="img/logo_desktop@1x.webp 1x, img/logo_desktop@2x.webp 2x">
+          <!-- 1х: 202px; 2x: 404px -->
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/logo_tablet@1x.webp 1x, img/logo_tablet@2x.webp 2x">
+          <!-- 1х: 38px; 2x: 76px -->
+          <source type="image/webp" srcset="img/logo_mobile@1x.webp 1x, img/logo_mobile@2x.webp 2x">
+          <!-- 1х: 38px; 2x: 76px -->
+          <img class="main-header__logo" src="img/logo_mobile@1x.png" srcset="img/logo_mobile@2x.png 2x" width="38" height="38"
+            alt="Логотип">
+        </picture>
+
       </a>
 
       <div class="main-header__wrap-right">
@@ -118,7 +126,7 @@
           (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники
           России.</span></p>
       <a class="about-us__link" href="#">
-        <p>Подробнее</p>
+        Подробнее
       </a>
     </section>
     <section class="variants">

@@ -21,7 +21,7 @@
     const orderText = order.querySelector('.order__text textarea');
     const feedbackTelephone = document.querySelector('.feedback__telephone input');
 
-    const onEscapeModalMenu = (evt) => {
+    const onEscapeModalMenu = function (evt) {
       if (evt.key === 'Escape') {
         closeForm();
       }
@@ -136,21 +136,15 @@
     }
   };
 
-  const onLoadSite = function () {
-
-    if (footerFirstParts) {
-      footerFirstParts.classList.add('footer-multilines__parts--closed');
-      footerFirstParts.addEventListener('click', onClickMainFooterFirstParts);
-    }
-    if (footerFirstContacts) {
-      footerFirstContacts.classList.add('footer-multilines__contacts--closed');
-      footerFirstContacts.addEventListener('click', onClickMainFooterFirstContacts);
-    }
-    if (order && mainHeaderOrder) {
-      mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
-    }
-  };
-
-  window.addEventListener('load', onLoadSite);
-
+  if (footerFirstParts) {
+    footerFirstParts.classList.add('footer-multilines__parts--closed');
+    footerFirstParts.addEventListener('click', onClickMainFooterFirstParts);
+  }
+  if (footerFirstContacts) {
+    footerFirstContacts.classList.add('footer-multilines__contacts--closed');
+    footerFirstContacts.addEventListener('click', onClickMainFooterFirstContacts);
+  }
+  if (order && mainHeaderOrder) {
+    mainHeaderOrder.addEventListener('click', onClickMainHeaderOrder);
+  }
 })();
