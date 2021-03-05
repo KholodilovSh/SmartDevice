@@ -132,11 +132,9 @@
     background-repeat: no-repeat;
   }
 
-  label:hover {
-    &,
-    &::before {
-      opacity: 0.7;
-    }
+  label:hover,
+  label:hover::before {
+    opacity: 0.7;
   }
 }
 

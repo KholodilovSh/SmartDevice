@@ -20,20 +20,20 @@
     <form class="order__form" action="https://echo.htmlacademy.ru/courses" method="post">
       <div class="order__wrap">
         <div class="order__name">
-          <label for="name" class="visually-hidden">Имя</label>
-          <input type="text" name="name" id="name" placeholder="Имя" required>
+          <label for="order-name" class="visually-hidden">Имя</label>
+          <input type="text" name="order-name" id="name" placeholder="Имя" required>
         </div>
         <div class="order__telephone">
-          <label for="phone" class="visually-hidden">Телефон</label>
-          <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="[0-9]{10}" required>
+          <label for="order-phone" class="visually-hidden">Телефон</label>
+          <input type="tel" name="phone" id="order-phone" placeholder="Телефон"
+            pattern="\+7[\(]{1}[0-9]{3}[\)]{1}[-]{1}\d{3}[-]{1}\d{2}[-]{1}\d{2}" required>
         </div>
         <div class="order__text">
-          <label for="text" class="visually-hidden">Ваш вопрос</label>
-          <textarea name="text" id="text" placeholder="Ваш вопрос" required></textarea>
+          <label for="order-text" class="visually-hidden">Ваш вопрос</label>
+          <textarea name="text" id="order-text" placeholder="Ваш вопрос" required></textarea>
         </div>
-        <div class="container">
-          <button class="order__submit" type="submit">Отправить</button>
-        </div>
+        <button class="order__submit" type="submit">Отправить</button>
+
         <div class="order__checkbox">
           <input class="visually-hidden" id="order-agreement" type="checkbox" name="agreement" checked>
           <label for="order-agreement">Я согласен на обработку персональных данных</label>
