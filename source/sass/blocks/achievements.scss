@@ -75,6 +75,18 @@ $margin-bottom-li-mobile: 15px;
 
   list-style: none;
 
+  li {
+    margin-right: 33px;
+
+    @media (max-width: $tablet-width-only) {
+      margin-right: 30px;
+    }
+  }
+
+  li:nth-child(2n) {
+    margin-right: 0;
+  }
+
   @media (max-width: $tablet-width-only) {
     justify-content: space-between;
     max-width: 720px;
@@ -90,7 +102,7 @@ $margin-bottom-li-mobile: 15px;
 .achievements__item {
   position: relative;
   padding-left: 40px;
-  margin-right: 30px;
+  // margin-right: 30px;
   margin-bottom: $margin-bottom-li;
   border-left: 3px solid $light-blue;
   max-width: 47.2%;
