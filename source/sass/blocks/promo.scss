@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
 
   @media (min-resolution: 1.5dppx) {
     background-image: url("../img/background_desktop@2x.jpg");

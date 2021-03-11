@@ -12,6 +12,12 @@
   background-color: $light-blue;
   color: $white;
 
+  h1 {
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+  }
+
   h2 {
     margin: 0 0 13px 40px;
     width: 243px;
@@ -35,6 +41,10 @@
   width: 490px;
   height: 605px;
   box-shadow: 0 4px 30px $grey;
+}
+
+.order--no-js {
+  height: 625px;
 }
 
 .order__form {
@@ -145,10 +155,10 @@
 
 .order__close {
   position: absolute;
-  top: 30px;
-  right: 36px;
-  width: 22px;
-  height: 22px;
+  top: 20px;
+  right: 26px;
+  width: 33px;
+  height: 33px;
   background-color: transparent;
   border: 0;
   cursor: pointer;
@@ -157,8 +167,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 8px;
-    left: 0;
+    top: 15px;
+    left: 5px;
     width: 23px;
     height: 2px;
     border-radius: 2px;
@@ -180,6 +190,19 @@
 
   &:hover::before {
     transform: scale(1.2)  rotate(45deg);
+    opacity: 0.5;
+  }
+}
+
+.order__logo {
+  margin-left: 40px;
+  width: 202px;
+
+  @media (max-width: $mobile-width-only) {
+    width: 38px;
+  }
+
+  &:hover {
     opacity: 0.5;
   }
 }

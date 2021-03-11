@@ -36,6 +36,10 @@ $shift: 54px;
       padding-bottom: 28px;
     }
   }
+
+  a:hover {
+    color: $light-blue;
+  }
 }
 
 .footer-multilines__wrap-outer {

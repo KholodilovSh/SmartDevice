@@ -22,12 +22,6 @@
   }
 }
 
-.main-header__link {
-  display: flex;
-  align-items: flex-start;
-  z-index: 1;
-}
-
 .main-header__logo {
   width: 202px;
 
@@ -92,6 +86,7 @@
     height: 14px;
     background-image: url("../img/envelope.svg");
     background-size: cover;
+    background-repeat: no-repeat;
 
     @media (max-width: $tablet-width-only) {
       left: 6px;
@@ -123,6 +118,7 @@
     height: 18px;
     background-image: url("../img/phone-call.svg");
     background-size: cover;
+    background-repeat: no-repeat;
 
     @media (max-width: $tablet-width-only) {
       left: 15px;

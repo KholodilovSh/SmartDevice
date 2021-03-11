@@ -3,6 +3,7 @@
   margin: 0 auto;
   max-width: $max-width;
 
+
   @media (max-width: $tablet-width-only) {
     max-width: 720px;
   }
@@ -15,5 +16,18 @@
     @media (max-width: $tablet-width-only) and (min-width: $mobile-width-only) {
       max-width: 715px - 2*68px;
     }
+  }
+
+  &--text {
+    @media (max-width: $mobile-width-only) {
+      min-width: 290px;
+      max-width: none;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &--air {
+    width: 98%;
   }
 }
