@@ -196,6 +196,7 @@ $field-width: 47.4%;
   textarea {
     padding-top: 13px;
     padding-left: 16px;
+    resize: none;
 
     @media (max-width: $tablet-width-only) {
       padding-left: 19px;

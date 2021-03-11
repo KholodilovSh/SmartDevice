@@ -137,6 +137,7 @@ $shift-psevdo-mobile: 23px;
       height: 620px;
       opacity: 0.2;
       background-size: cover;
+      background-position: center center;
 
       @media (max-width: $tablet-width-only) {
         top: -$shift-psevdo;
@@ -145,7 +146,8 @@ $shift-psevdo-mobile: 23px;
 
       @media (max-width: $mobile-width-only) {
         top: -$shift-psevdo-mobile;
-        width: 290px;
+        overflow-x: hidden;
+        min-width: 290px;
       }
     }
   }
@@ -167,12 +169,12 @@ $shift-psevdo-mobile: 23px;
     }
 
     @media (max-width: $mobile-width-only) {
-      width: 290px;
-      background-image: url("../img/1_mobile@1x.png");
+      width: 100%;
+      // background-image: url("../img/1_mobile@1x.png");
 
-      @media (min-resolution: 1.5dppx) {
-        background-image: url("../img/1_mobile@2x.png");
-      }
+      // @media (min-resolution: 1.5dppx) {
+      //   background-image: url("../img/1_mobile@2x.png");
+      // }
     }
   }
 
@@ -184,6 +186,7 @@ $shift-psevdo-mobile: 23px;
     }
 
     @media (max-width: $tablet-width-only) {
+      width: 716px;
       background-image: url("../img/2_tablet@1x.png");
 
       @media (min-resolution: 1.5dppx) {
@@ -192,11 +195,12 @@ $shift-psevdo-mobile: 23px;
     }
 
     @media (max-width: $mobile-width-only) {
-      background-image: url("../img/2_mobile@1x.png");
+      width: 100%;
+      // background-image: url("../img/2_mobile@1x.png");
 
-      @media (min-resolution: 1.5dppx) {
-        background-image: url("../img/2_mobile@2x.png");
-      }
+      // @media (min-resolution: 1.5dppx) {
+      //   background-image: url("../img/2_mobile@2x.png");
+      // }
     }
   }
 
@@ -208,6 +212,7 @@ $shift-psevdo-mobile: 23px;
     }
 
     @media (max-width: $tablet-width-only) {
+      width: 716px;
       background-image: url("../img/3_tablet@1x.png");
 
       @media (min-resolution: 1.5dppx) {
@@ -216,11 +221,12 @@ $shift-psevdo-mobile: 23px;
     }
 
     @media (max-width: $mobile-width-only) {
-      background-image: url("../img/3_mobile@1x.png");
+      width: 100%;
+      // background-image: url("../img/3_mobile@1x.png");
 
-      @media (min-resolution: 1.5dppx) {
-        background-image: url("../img/3_mobile@2x.png");
-      }
+      // @media (min-resolution: 1.5dppx) {
+      //   background-image: url("../img/3_mobile@2x.png");
+      // }
     }
   }
 }
