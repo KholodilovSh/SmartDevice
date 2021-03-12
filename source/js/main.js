@@ -116,23 +116,30 @@
 
   const onClickMainFooterFirstParts = function () {
 
-    if (footerFirstParts.classList.contains('footer-multilines__parts--closed')) {
-      footerFirstParts.classList.remove('footer-multilines__parts--closed');
-      footerFirstParts.classList.add('footer-multilines__parts--open');
-    } else {
-      footerFirstParts.classList.remove('footer-multilines__parts--open');
-      footerFirstParts.classList.add('footer-multilines__parts--closed');
+    const closeBlock = footerFirstParts.classList.contains('footer-multilines__parts--closed');
+    toggleAccordeon(footerFirstParts, 'footer-multilines__parts', closeBlock);
+
+    if (!footerFirstContacts.classList.contains('footer-multilines__contacts--closed')) {
+      toggleAccordeon(footerFirstContacts, 'footer-multilines__contacts', false);
     }
   };
 
   const onClickMainFooterFirstContacts = function () {
 
-    if (footerFirstContacts.classList.contains('footer-multilines__contacts--closed')) {
-      footerFirstContacts.classList.remove('footer-multilines__contacts--closed');
-      footerFirstContacts.classList.add('footer-multilines__contacts--open');
+    const closeBlock = footerFirstContacts.classList.contains('footer-multilines__contacts--closed');
+    toggleAccordeon(footerFirstContacts, 'footer-multilines__contacts', closeBlock);
+    if (!footerFirstParts.classList.contains('footer-multilines__parts--closed')) {
+      toggleAccordeon(footerFirstParts, 'footer-multilines__parts', false);
+    }
+  };
+
+  const toggleAccordeon = function (block, nameClass, closeBlock) {
+    if (closeBlock) {
+      block.classList.remove(nameClass + '--closed');
+      block.classList.add(nameClass + '--open');
     } else {
-      footerFirstContacts.classList.remove('footer-multilines__contacts--open');
-      footerFirstContacts.classList.add('footer-multilines__contacts--closed');
+      block.classList.remove(nameClass + '--open');
+      block.classList.add(nameClass + '--closed');
     }
   };
 

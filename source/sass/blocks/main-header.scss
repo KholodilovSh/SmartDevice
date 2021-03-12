@@ -32,13 +32,15 @@
 
 .main-header__wrap-right {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
   width: 625px;
 
   @media (max-width: $tablet-width-only) {
-    width: 88px;
+    min-width: 88px;
+    width: auto;
   }
 }
 

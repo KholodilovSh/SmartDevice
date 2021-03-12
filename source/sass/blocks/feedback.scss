@@ -5,20 +5,20 @@ $field-width: 47.4%;
   padding-bottom: 113px;
   background-color: $light-blue;
   color: $white;
-  background-image: url("../img/paper.png");
+  background-image: url("../img/triangles.svg");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: contain;
 
   @media (max-width: $tablet-width-only) {
-    padding-top: 79px;
+    padding-top: 80px;
     padding-bottom: 104px;
     background-image: none;
   }
 
   @media (max-width: $mobile-width-only) {
     padding-top: 28px;
-    padding-bottom: 42px;
+    padding-bottom: 39px;
   }
 
   h2 {
@@ -29,7 +29,7 @@ $field-width: 47.4%;
 
     @media (max-width: $tablet-width-only) {
       margin-left: -2px;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
       font-size: 32px;
       line-height: 45px;
     }
@@ -51,7 +51,7 @@ $field-width: 47.4%;
     line-height: 22px;
 
     @media (max-width: $tablet-width-only) {
-      margin-left: 2px;
+      margin-left: 3px;
       margin-bottom: 53px;
     }
 
@@ -60,16 +60,44 @@ $field-width: 47.4%;
       margin-bottom: 24px;
     }
   }
+
+  img {
+    margin-top: 68px;
+    margin-left: -8px;
+    margin-right: 40px;
+
+    @media (max-width: $tablet-width-only) {
+      display: none;
+    }
+  }
+}
+
+.feedback__main-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1195px;
+
+  @media (max-width: $tablet-width-only) {
+    display: block;
+  }
 }
 
 .feedback__form {
-  margin-left: 51%;
-  max-width: 570px;
+  margin-top: -2px;
+  margin-right: 12px;
+  width: 570px;
 
   @media (max-width: $tablet-width-only) {
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 0;
+    margin-left: 64px;
+    width: 100%;
     max-width: 590px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 0;
   }
 
   @include form-inputs;
@@ -108,6 +136,10 @@ $field-width: 47.4%;
   display: flex;
   justify-content: space-between;
   margin-left: 3px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-left: 4px;
+  }
 
   @media (max-width: $mobile-width-only) {
     display: block;
