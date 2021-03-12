@@ -1,6 +1,9 @@
 /* Global */
 html {
   scroll-behavior: smooth;
+
+  // Footer
+  height: 100%;
 }
 
 body {
@@ -9,6 +12,13 @@ body {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   overflow-x: hidden;
   min-width: $min-width;
+
+  // Footer
+  @media (min-width: $tablet-width) {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
 }
 
 .body--overflow-hidden {
