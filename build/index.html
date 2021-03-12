@@ -175,7 +175,7 @@
             </div>
             <div class="feedback__wrap feedback__wrap--check">
               <button class="feedback__submit" type="submit">Задать вопрос</button>
-              <input class="visually-hidden" id="feedback-agreement" type="checkbox" name="agreement" checked="">
+              <input class="visually-hidden" id="feedback-agreement" type="checkbox" name="agreement" checked="" required="">
               <label for="feedback-agreement">Я согласен на обработку персональных данных</label>
             </div>
           </form>
@@ -185,61 +185,63 @@
   </main>
   <footer>
     <section class="footer-multilines">
-      <div class="footer-multilines__wrap-outer">
-        <div class="container">
-          <div class="footer-multilines__wrap-socials">
-            <a class="footer-multilines__link">
-              <svg width="216" height="52" viewBox="0 0 216 52">
-                <use xlink:href="img/sprite_auto.svg#icon-logo-footer"></use>
-              </svg>
-            </a>
-            <p>1999-2018 SD Service Devices</p>
-            <ul class="footer-multilines__socials">
-              <li><a href="https://www.facebook.com/htmlacademy" class="footer-multilines__social footer-multilines__social--facebook"></a></li>
-              <li><a href="https://ok.com/htmlacademy" class="footer-multilines__social footer-multilines__social--ok"></a>
-              </li>
-              <li><a href="https://vk.com/htmlacademy" class="footer-multilines__social footer-multilines__social--vk"></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-multilines__wrap-parts-office">
-        <div class="footer-multilines__parts">
+      <div class="footer-multilines__limited">
+        <div class="footer-multilines__wrap-outer">
           <div class="container">
-            <h3>Разделы сайта</h3>
-            <ul>
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Комплектующие</a></li>
-              <li><a href="#">Продукты</a></li>
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Производство печатных плат</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">Монтаж печатных плат</a></li>
-            </ul>
+            <div class="footer-multilines__wrap-socials">
+              <a class="footer-multilines__link">
+                <svg width="216" height="52" viewBox="0 0 216 52">
+                  <use xlink:href="img/sprite_auto.svg#icon-logo-footer"></use>
+                </svg>
+              </a>
+              <p>1999-2018 SD Service Devices</p>
+              <ul class="footer-multilines__socials">
+                <li><a href="https://www.facebook.com/htmlacademy" class="footer-multilines__social footer-multilines__social--facebook"></a></li>
+                <li><a href="https://ok.com/htmlacademy" class="footer-multilines__social footer-multilines__social--ok"></a>
+                </li>
+                <li><a href="https://vk.com/htmlacademy" class="footer-multilines__social footer-multilines__social--vk"></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="footer-multilines__contacts">
-          <h3>Наш офис</h3>
-          <p>г. Мытищи, Олимпийский проспект, д.10</p>
-          <ul>
-            <li>
-              <a href="tel:+74955894050">
-                +7 (495) 589-40-50
-              </a>
-            </li>
-            <li>
-              <a href="tel:+79250038767">
-                +7 (925) 003-87-67
-              </a>
-            </li>
-            <li>
-              <a href="tel:+792692608079">
-                +7 (926) 926-080-79
-              </a>
-            </li>
-          </ul>
+
+        <div class="footer-multilines__wrap-parts-office">
+          <div class="footer-multilines__parts">
+            <div class="container">
+              <h3>Разделы сайта</h3>
+              <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Комплектующие</a></li>
+                <li><a href="#">Продукты</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Производство печатных плат</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Монтаж печатных плат</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-multilines__contacts">
+            <h3>Наш офис</h3>
+            <p>г. Мытищи, Олимпийский проспект, д.10</p>
+            <ul>
+              <li>
+                <a href="tel:+74955894050">
+                  +7 (495) 589-40-50
+                </a>
+              </li>
+              <li>
+                <a href="tel:+79250038767">
+                  +7 (925) 003-87-67
+                </a>
+              </li>
+              <li>
+                <a href="tel:+792692608079">
+                  +7 (926) 926-080-79
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -280,7 +282,7 @@
         <button class="order__submit" type="submit">Отправить</button>
 
         <div class="order__checkbox">
-          <input class="visually-hidden" id="order-agreement" type="checkbox" name="agreement" checked="">
+          <input class="visually-hidden" id="order-agreement" type="checkbox" name="agreement" checked="" required="">
           <label for="order-agreement">Я согласен на обработку персональных данных</label>
         </div>
       </div>
