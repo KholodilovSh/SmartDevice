@@ -43,6 +43,7 @@
         if (isStorageSupport) {
           localStorage.setItem('FIO', orderName.value);
           localStorage.setItem('phone', orderPhone.value);
+          localStorage.setItem('text', orderText.value);
         }
       }
     };
@@ -73,10 +74,12 @@
     let isStorageSupport = true;
     let storageFIO = '';
     let storagePhone = '';
+    let storageText = '';
 
     try {
       storageFIO = localStorage.getItem('FIO');
       storagePhone = localStorage.getItem('phone');
+      storageText = localStorage.getItem('text');
     } catch (err) {
       isStorageSupport = false;
     }
@@ -109,6 +112,10 @@
 
       if (storagePhone) {
         orderPhone.value = storagePhone;
+      }
+
+      if (storageText) {
+        orderText.value = storageText;
       }
       orderName.focus();
     };
