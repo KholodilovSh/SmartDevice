@@ -9,7 +9,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    max-width: 290px;
+    max-width: 90%;
   }
 
   &--promo {
@@ -28,6 +28,20 @@
   }
 
   &--air {
-    width: 98%;
+    width: 96%;
+  }
+
+  &--variant {
+    width: 96%;
+
+    @media (max-width: $mobile-width-only) {
+      padding-right: 9px;
+    }
+  }
+
+  &--parts {
+    @media (max-width: $mobile-width-only) {
+      width: 290px;
+    }
   }
 }
