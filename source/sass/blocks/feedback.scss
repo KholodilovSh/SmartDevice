@@ -2,7 +2,7 @@ $field-width: 47.4%;
 
 .feedback {
   padding-top: 93px;
-  padding-bottom: 113px;
+  padding-bottom: 114px;
   background-color: $light-blue;
   color: $white;
   background-image: url("../img/triangles.svg");
@@ -12,17 +12,17 @@ $field-width: 47.4%;
 
   @media (max-width: $tablet-width-only) {
     padding-top: 80px;
-    padding-bottom: 104px;
+    padding-bottom: 103px;
     background-image: none;
   }
 
   @media (max-width: $mobile-width-only) {
     padding-top: 28px;
-    padding-bottom: 39px;
+    padding-bottom: 41px;
   }
 
   h2 {
-    margin: 0 0 8px -5px;
+    margin: 0 0 10px -5px;
     font-weight: 400;
     font-size: 36px;
     line-height: 51px;
@@ -44,7 +44,7 @@ $field-width: 47.4%;
   }
 
   p {
-    margin: 0 0 49px 0;
+    margin: 0 0 51px 0;
     font-family: "PT Mono", "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -57,13 +57,13 @@ $field-width: 47.4%;
 
     @media (max-width: $mobile-width-only) {
       margin-left: 0;
-      margin-bottom: 24px;
+      margin-bottom: 25px;
     }
   }
 
   img {
     margin-top: 68px;
-    margin-left: -8px;
+    margin-left: -13px;
     margin-right: 40px;
 
     @media (max-width: $tablet-width-only) {
@@ -105,19 +105,19 @@ $field-width: 47.4%;
   input {
     margin-bottom: 40px;
     width: 100%;
-    height: 50px;
+    height: 51px;
 
     @media (max-width: $tablet-width-only) {
       margin-bottom: 43px;
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 33px;
+      margin-bottom: 31px;
     }
   }
 
   textarea {
-    margin-bottom: 43px;
+    margin-bottom: 39px;
     width: 100%;
     height: 154px;
 
@@ -142,9 +142,14 @@ $field-width: 47.4%;
 
   @media (max-width: $mobile-width-only) {
     display: block;
+    margin-left: 0;
   }
 
   &--check {
+    input {
+      width: 0;
+    }
+
     label {
       position: relative;
       display: inline-flex;
@@ -166,7 +171,7 @@ $field-width: 47.4%;
 
       @media (max-width: $mobile-width-only) {
         margin-left: 31px;
-        width: 100%;
+        width: 95%;
       }
 
       &::before {
@@ -228,6 +233,10 @@ $field-width: 47.4%;
     margin-left: 4px;
   }
 
+  @media (max-width: $mobile-width-only) {
+    margin-left: 0;
+  }
+
   textarea {
     padding-top: 13px;
     padding-left: 16px;
@@ -239,6 +248,7 @@ $field-width: 47.4%;
 
     @media (max-width: $mobile-width-only) {
       padding-left: 17px;
+      padding-top: 12px;
       height: 104px;
     }
   }
@@ -252,8 +262,10 @@ $field-width: 47.4%;
   }
 
   @media (max-width: $mobile-width-only) {
+    padding-left: 0;
+
     input {
-      padding-left: 11px;
+      padding-left: 16px;
     }
   }
 }
@@ -269,6 +281,6 @@ $field-width: 47.4%;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
 }

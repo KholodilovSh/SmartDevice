@@ -121,7 +121,8 @@
     @media (max-width: $mobile-width-only) {
       width: 301px;
       height: 220px;
-      left: 12px;
+      left: 50%;
+      transform: translateX(-50%);
       top: -135px;
     }
   }
@@ -133,6 +134,11 @@
 
 .promo__wrap {
   margin-right: 20px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .promo__link {

@@ -7,8 +7,8 @@ $shift: 54px;
 .footer-multilines__limited {
   display: flex;
   justify-content: space-between;
-  max-width: 1412px;
-  margin: 0 auto 52px auto;
+  max-width: 1466px;
+  margin: 0 auto 42px auto;
   padding-top: 63px;
   background-color: $grey-background;
 
@@ -59,9 +59,12 @@ $shift: 54px;
 }
 
 .footer-multilines__wrap-socials {
+  margin-left: 25px;
+
   @media (max-width: $tablet-width-only) {
     display: flex;
     justify-content: space-between;
+    margin-left: 0;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -129,7 +132,7 @@ $shift: 54px;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 28px;
+    margin-bottom: 18px;
 
     li:first-child a {
       margin-left: 0;
@@ -142,6 +145,7 @@ $shift: 54px;
   width: 27px;
   height: 27px;
   margin-right: 14px;
+  margin-bottom: 10px;
   font-size: 0;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -197,7 +201,7 @@ $shift: 54px;
   }
 
   p {
-    margin-bottom: -1px;
+    margin-bottom: 2px;
 
     @media (max-width: $mobile-width-only) {
       margin-top: 5px;
@@ -207,7 +211,7 @@ $shift: 54px;
 }
 
 .footer-multilines__contacts {
-  margin-right: 3px;
+  margin-right: 29px;
 
   @media (max-width: $tablet-width-only) {
     margin-right: 11px;
@@ -267,7 +271,7 @@ $shift: 54px;
 .footer-multilines__wrap-parts-office {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 69.4%;
 
   @media (max-width: $tablet-width-only) {
     margin-top: 38px;
