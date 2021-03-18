@@ -69,14 +69,16 @@ $margin-bottom-li-mobile: 15px;
   flex-wrap: wrap;
   max-width: 1200px;
   margin-top: -4px;
-  margin-left: 125px;
+  // margin-left: 125px;
   margin-bottom: 0;
-  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 0 15px;
 
   list-style: none;
 
   li {
-    margin-right: 33px;
+    margin-right: 41px;
 
     @media (max-width: $tablet-width-only) {
       margin-right: 30px;
@@ -91,6 +93,7 @@ $margin-bottom-li-mobile: 15px;
     justify-content: space-between;
     max-width: 720px;
     margin-left: -2px;
+    padding: 0;
   }
 
   @media (max-width: $mobile-width-only) {
