@@ -44,14 +44,14 @@ $shift-psevdo-mobile: 23px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 0 0 123px;
+    margin: 0 auto 0 auto;
     padding: 0;
     max-width: 1170px;
     list-style: none;
 
     @media (max-width: $tablet-width-only) {
       display: block;
-      margin-left: 0;
+      margin: 0;
     }
   }
 }
